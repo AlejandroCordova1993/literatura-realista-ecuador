@@ -528,11 +528,11 @@ function renderEvents(containerId, events) {
         // Alternate above and below timeline, with increasing distance
         const isAbove = index % 2 === 0;
         const stackLevel = Math.floor(index / 2);
-        event.verticalOffset = (isAbove ? -1 : 1) * (100 + stackLevel * 80);
+        event.verticalOffset = (isAbove ? -1 : 1) * (140 + stackLevel * 120);
         
         // Add horizontal offset to prevent marker overlap
         const totalEvents = eventsInYear.length;
-        const horizontalSpread = 25; // pixels between each event
+        const horizontalSpread = 45; // pixels between each event (aumentado de 25 a 45)
         event.horizontalOffset = ((index - (totalEvents - 1) / 2) * horizontalSpread);
         
         event.isDense = true; // Mark as part of dense year
@@ -580,11 +580,11 @@ function renderEvents(containerId, events) {
     
     // Calculate dynamic width based on title length
     const titleLength = event.title.length;
-    let cardWidth = 200; // default
+    let cardWidth = 220; // default (aumentado de 200 a 220)
     if (titleLength > 40) {
-      cardWidth = 280;
+      cardWidth = 300; // aumentado de 280 a 300
     } else if (titleLength > 25) {
-      cardWidth = 240;
+      cardWidth = 260; // aumentado de 240 a 260
     }
     label.style.minWidth = cardWidth + 'px';
     
@@ -607,7 +607,7 @@ function renderEvents(containerId, events) {
         left: 50%;
         width: 2px;
         background: ${event.color};
-        opacity: 0.4;
+        opacity: 0.25;
         transform: translateX(-50%);
       `;
       
