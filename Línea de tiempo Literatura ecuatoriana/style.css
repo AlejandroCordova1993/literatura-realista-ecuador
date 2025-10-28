@@ -1315,6 +1315,23 @@ body {
   align-items: center;
   cursor: pointer;
   transition: all 0.3s var(--ease-standard), opacity 0.4s ease, transform 0.3s var(--ease-standard);
+  z-index: 5;
+}
+
+/* Dense year visual indicator */
+.timeline-event[data-year="1933"]::after,
+.timeline-event[data-year="1935"]::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 2px dashed rgba(var(--color-teal-500-rgb), 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .timeline-event:hover {
@@ -1451,10 +1468,19 @@ kbd {
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
   pointer-events: none;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .literature-track .event-label {
   top: -80px;
+}
+
+/* Adjust label position for vertically offset events */
+.timeline-event[style*="calc(50% +"] .event-label,
+.timeline-event[style*="calc(50% -"] .event-label {
+  width: 160px;
+  font-size: 11px;
 }
 
 .timeline-event:hover .event-label {

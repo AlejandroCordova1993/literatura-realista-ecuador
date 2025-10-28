@@ -34,28 +34,52 @@ const literatureEvents = [
   { year: 1890, title: "Humberto Fierro (nace)", description: "Nacimiento de Humberto Fierro, poeta modernista de la Generación Decapitada.", category: "modernismo", color: "#9370DB", period: "Modernismo (1890-1920)", details: "El más festivo de la Generación Decapitada, combinaba melancolía con sensualidad. Su muerte en 1929 cerró el capítulo del grupo." },
   { year: 1897, title: "Hugo Mayo (nace)", description: "Nacimiento de Hugo Mayo (1897-1988), poeta modernista de larga trayectoria.", category: "modernismo", color: "#9370DB", period: "Modernismo (1890-1920)", details: "Poeta modernista que evolucionó hacia formas más vanguardistas. Vivió hasta edad muy avanzada, siendo testigo de múltiples generaciones literarias." },
   { year: 1904, title: "Alfredo Gangotena (nace)", description: "Nacimiento de Alfredo Gangotena, poeta ecuatoriano que escribió principalmente en francés.", category: "modernismo", color: "#9370DB", period: "Modernismo (1890-1920)", details: "Poeta aristocrático vinculado a vanguardias europeas. Amigo de Henri Michaux. Su poesía en francés fue muy valorada en Europa pero poco conocida en Ecuador durante su vida." },
-  { year: 1912, title: "Arturo Borja (muerte)", description: "Muerte de Arturo Borja (1892-1912), poeta modernista, primer miembro de la Generación Decapitada en fallecer.", category: "modernismo", color: "#9370DB", period: "Modernismo (1890-1920)", details: "Se suicidó con sobredosis de morfina a los 20 años. Su poesía, publicada póstumamente, refleja angustia existencial y búsqueda de la belleza absoluta." },
-  { year: 1919, title: "Medardo Ángel Silva (muerte)", description: "Muerte de Medardo Ángel Silva (1898-1919), poeta bohemio, autor de 'El alma en los labios'.", category: "modernismo", color: "#9370DB", period: "Modernismo (1890-1920)", details: "Asesinado a los 21 años en circunstancias misteriosas (posible suicidio). Su poema 'El alma en los labios' es uno de los más populares de la literatura ecuatoriana. Representó la bohemia literaria de Guayaquil." },
+  { year: 1912, title: "Arturo Borja (muere por suicidio)", description: "Muerte de Arturo Borja (1892-1912), poeta modernista, primer miembro de la Generación Decapitada en fallecer.", category: "modernismo", color: "#9370DB", period: "Modernismo (1890-1920)", details: "Se suicidó con sobredosis de morfina a los 20 años. Su poesía, publicada póstumamente, refleja angustia existencial y búsqueda de la belleza absoluta." },
+  { year: 1919, title: "Medardo Ángel Silva (muere por suicidio)", description: "Muerte de Medardo Ángel Silva (1898-1919), poeta bohemio, autor de 'El alma en los labios'.", category: "modernismo", color: "#9370DB", period: "Modernismo (1890-1920)", details: "Asesinado a los 21 años en circunstancias misteriosas (posible suicidio). Su poema 'El alma en los labios' es uno de los más populares de la literatura ecuatoriana. Representó la bohemia literaria de Guayaquil." },
   { year: 1927, title: "Ernesto Noboa (muerte)", description: "Muerte de Ernesto Noboa y Caamaño (1891-1927), poeta aristocrático de refinamiento extremo.", category: "modernismo", color: "#9370DB", period: "Modernismo (1890-1920)", details: "Murió de tuberculosis. Su poesía es la más hermética y simbolista de la Generación Decapitada, con referencias cultas y tono melancólico." },
   { year: 1929, title: "Humberto Fierro (muerte)", description: "Muerte de Humberto Fierro (1890-1929), último de la Generación Decapitada en fallecer.", category: "modernismo", color: "#9370DB", period: "Modernismo (1890-1920)", details: "Murió de apoplejía. Su muerte cierra el capítulo de la Generación Decapitada. Fierro era el más festivo del grupo, combinando melancolía con sensualidad." },
   
   // Vanguardia
   { year: 1926, title: "'Microgramas'", description: "Jorge Carrera Andrade publica 'Microgramas', poemas breves de vanguardia e imágenes precisas.", category: "vanguardia", color: "#FF6347", period: "Vanguardia (1920-1940)", details: "Carrera Andrade (1903-1978) introduce técnicas vanguardistas en Ecuador. Sus 'microgramas' son poemas-destello, imágenes concentradas. Diplomático y viajero, su poesía combina lo local con lo universal." },
-  { year: 1927, title: "'Un hombre muerto a puntapiés'", description: "Pablo Palacio publica su relato vanguardista, renovación radical de la narrativa ecuatoriana.", category: "vanguardia", color: "#FF6347", period: "Vanguardia (1920-1940)", details: "Palacio (1906-1947) revoluciona la narrativa con técnicas experimentales: monólogo interior, fragmentación, absurdo. Su obra adelantada a su época explora la locura, marginalidad y límites del lenguaje." },
+  { year: 1927, title: "'Un hombre muerto a puntapiés' (Pablo Palacio)", description: "Pablo Palacio publica su relato vanguardista, renovación radical de la narrativa ecuatoriana.", category: "vanguardia", color: "#FF6347", period: "Vanguardia (1920-1940)", details: "Palacio (1906-1947) revoluciona la narrativa con técnicas experimentales: monólogo interior, fragmentación, absurdo. Su obra adelantada a su época explora la locura, marginalidad y límites del lenguaje." },
   { year: 1930, title: "Alfredo Gangotena", description: "Alfredo Gangotena (1904-1944), poeta ecuatoriano que escribió en francés, vinculado a vanguardias europeas.", category: "vanguardia", color: "#FF6347", period: "Vanguardia (1920-1940)", details: "Poeta aristocrático que vivió principalmente en Francia. Amigo de Henri Michaux y ligado al surrealismo. Su poesía en francés fue muy valorada en Europa, pero poco conocida en Ecuador durante su vida." },
   
   // Realismo Social e Indigenismo
   { year: 1910, title: "Nelson Estupiñán Bass (nace)", description: "Nacimiento de Nelson Estupiñán Bass, pionero de la literatura afroecuatoriana.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Escritor esmeraldeño que retrató la vida afroecuatoriana. Obras incluyen 'Cuando los guayacanes florecían'. Voz fundamental de la identidad afrodescendiente en Ecuador." },
   { year: 1915, title: "Ángel Felicísimo Rojas (nace)", description: "Nacimiento de Ángel Felicísimo Rojas, narrador del realismo social.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Autor de 'El éxodo de Yangana' y otras obras sobre la vida rural ecuatoriana. Representante del indigenismo y realismo social de mediados de siglo." },
-  { year: 1930, title: "'Los que se van'", description: "Publicación de 'Los que se van', colección de relatos del Grupo de Guayaquil, inicio del realismo social.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Demetrio Aguilera Malta, Joaquín Gallegos Lara y Enrique Gil Gilbert publican esta colección sobre campesinos costeños. Marca el nacimiento del realismo social ecuatoriano, con denuncia de injusticias y lenguaje regional." },
-  { year: 1934, title: "'Huasipungo'", description: "Jorge Icaza publica 'Huasipungo', novela cumbre del indigenismo ecuatoriano.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Denuncia brutal de la explotación indígena. Narra la construcción de una carretera y el despojo de tierras a comunidades. Lenguaje crudo y realista. Una de las novelas ecuatorianas más traducidas y estudiadas internacionalmente." },
-  { year: 1934, title: "'Los Sangurimas'", description: "José de la Cuadra publica 'Los Sangurimas', saga familiar del realismo social montuvio.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "De la Cuadra (1903-1941) retrata la vida montuvia (campesinos costeños) con violencia, pasión y realismo. Su estilo es más elaborado que el de otros realistas sociales." },
-  { year: 1935, title: "'En las calles'", description: "Jorge Icaza publica 'En las calles', novela sobre levantamiento popular urbano.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela que retrata un levantamiento en Quito con perspectiva social. Icaza expande su temática del mundo indígena rural al mundo urbano y sus conflictos de clase." },
-  { year: 1937, title: "'Cholos'", description: "Jorge Icaza publica 'Cholos', novela sobre mestizos y estratificación social.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Explora la situación de los mestizos en la sociedad ecuatoriana. Denuncia racismo y explotación en diferentes niveles de la estratificación social." },
-  { year: 1939, title: "'Media vida deslumbrados'", description: "José de la Cuadra publica 'Media vida deslumbrados', relatos sobre la costa ecuatoriana.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Colección de relatos que muestran la maestría narrativa de De la Cuadra. Publicada póstumamente tras su temprana muerte en 1941." },
-  { year: 1943, title: "'Juyungo'", description: "Adalberto Ortiz publica 'Juyungo', novela pionera de la literatura afroecuatoriana.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Primera gran novela sobre la experiencia afroecuatoriana en Esmeraldas. Combina denuncia social con elementos culturales afros. Ortiz también fue poeta y artista plástico." },
-  { year: 1948, title: "'Huairapamushcas'", description: "Jorge Icaza publica 'Huairapamushcas', novela sobre migración indígena a la ciudad.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "El título significa 'hijos del viento' en quichua. Narra la migración de indígenas desde comunidades rurales hacia Quito. Icaza explora la desintegración cultural y explotación urbana." },
-  { year: 1973, title: "Muerte de Enrique Gil Gilbert", description: "Fallece Enrique Gil Gilbert (1912-1973), miembro del Grupo de Guayaquil.", category: "realismo", color: "#9B7653", period: "Realismo Social (1930-1950)", details: "Muere uno de los fundadores del realismo social ecuatoriano. Autor de 'Nuestro Pan' (1952) y coautor de 'Los que se van'. Militante comunista comprometido con causas sociales." },
+  { year: 1930, title: "'Los que se van' (cuentos del cholo y del montuvio)", description: "Publicación de 'Los que se van', colección de relatos del Grupo de Guayaquil, inicio del realismo social.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Demetrio Aguilera Malta, Joaquín Gallegos Lara y Enrique Gil Gilbert publican esta colección sobre campesinos costeños. Marca el nacimiento del realismo social ecuatoriano, con denuncia de injusticias y lenguaje regional." },
+  { year: 1934, title: "'Huasipungo' (Jorge Icaza)", description: "Jorge Icaza publica 'Huasipungo', novela cumbre del indigenismo ecuatoriano.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Denuncia brutal de la explotación indígena. Narra la construcción de una carretera y el despojo de tierras a comunidades. Lenguaje crudo y realista. Una de las novelas ecuatorianas más traducidas y estudiadas internacionalmente." },
+  // José de la Cuadra (1903-1941)
+  { year: 1903, title: "José de la Cuadra (nace)", description: "Nacimiento de José de la Cuadra, narrador del realismo social montuvio.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Uno de los grandes narradores ecuatorianos. Retratará la vida montuvia (campesinos costeños) con maestría literaria. Miembro fundador del Grupo de Guayaquil junto a Gallegos Lara y Aguilera Malta." },
+  { year: 1932, title: "'Horno' (José de la Cuadra)", description: "José de la Cuadra publica 'Horno', libro de cuentos sobre la costa ecuatoriana.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Primera colección de cuentos de De la Cuadra. Retrata el mundo montuvio con realismo y fuerza narrativa. Establece su estilo literario característico: crudo pero poético." },
+  { year: 1933, title: "'Repisas' (José de la Cuadra)", description: "José de la Cuadra publica 'Repisas', colección de cuentos.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Segunda colección de cuentos que consolida su maestría narrativa. Continúa explorando el universo montuvio con profundidad psicológica y social." },
+  { year: 1934, title: "'Los Sangurimas' (José de la Cuadra)", description: "José de la Cuadra publica 'Los Sangurimas', novela montuvia considerada su obra maestra.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela montuvia que narra la saga de una familia de la costa ecuatoriana. Considerada antecedente de la novela total latinoamericana por su complejidad narrativa, polifonía y estructura carnavalesca. Anticipa técnicas del boom latinoamericano. Retrata la violencia, pasión y códigos de honor del montuvio costeño." },
+  { year: 1937, title: "'Guasinton' (José de la Cuadra)", description: "José de la Cuadra publica 'Guasinton', cuentos montuvios.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Colección de cuentos que profundiza en el mundo montuvio. Muestra la madurez literaria de De la Cuadra. Personajes complejos y situaciones que revelan la psicología campesina costeña." },
+  { year: 1941, title: "José de la Cuadra (muere)", description: "Fallece José de la Cuadra (1903-1941), uno de los grandes del realismo social ecuatoriano.", category: "realismo", color: "#9B7653", period: "Realismo Social (1930-1950)", details: "Muere prematuramente a los 38 años. Dejó una obra narrativa fundamental para la literatura ecuatoriana. Su estilo literario era más refinado que el de otros realistas sociales, combinando denuncia con calidad estética." },
+  
+  // Alfredo Pareja Diezcanseco (1907-1993) - AUTOR FALTANTE
+  { year: 1907, title: "Alfredo Pareja Diezcanseco (nace)", description: "Nacimiento de Alfredo Pareja Diezcanseco, narrador fundamental del realismo social.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Uno de los grandes narradores ecuatorianos del siglo XX. Parte del Grupo de Guayaquil. Su obra abarcará novela, ensayo y crítica literaria. Será también historiador y diplomático." },
+  { year: 1933, title: "'El muelle' (Alfredo Pareja Diezcanseco)", description: "Alfredo Pareja Diezcanseco publica 'El muelle', novela sobre el puerto de Guayaquil.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Primera novela de Pareja Diezcanseco. Retrata la vida portuaria de Guayaquil con sus trabajadores, marginales y explotación laboral. Establece su compromiso con el realismo social." },
+  { year: 1933, title: "'Yunga' (Enrique Gil Gilbert)", description: "Enrique Gil Gilbert publica 'Yunga', relatos sobre la costa ecuatoriana.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Colección de relatos que muestran la maestría narrativa de Gil Gilbert. Retrata el mundo rural costeño con compromiso social y calidad literaria." },
+  { year: 1933, title: "'Don Goyo' (Demetrio Aguilera Malta)", description: "Demetrio Aguilera Malta publica 'Don Goyo', novela sobre montuvios.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela montuvia que retrata la vida de los campesinos costeños. Don Goyo es un personaje mítico que representa la sabiduría y resistencia del pueblo montuvio. Aguilera Malta combina realismo con elementos míticos." },
+  { year: 1935, title: "'En las calles' (Jorge Icaza)", description: "Jorge Icaza publica 'En las calles', novela urbana sobre levantamiento popular.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela que retrata un levantamiento en Quito con perspectiva social. Icaza expande su temática del mundo indígena rural al mundo urbano y sus conflictos de clase." },
+  { year: 1935, title: "'Baldomera' (Alfredo Pareja Diezcanseco)", description: "Alfredo Pareja Diezcanseco publica 'Baldomera', novela con protagonista afroecuatoriana.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela protagonizada por una mujer afroecuatoriana. Pionera en dar voz a personajes afrodescendientes. Rompe estereotipos y presenta personaje femenino afroecuatoriano con profundidad psicológica. Una de las obras más importantes de Pareja Diezcanseco." },
+  { year: 1935, title: "'La isla virgen' (Demetrio Aguilera Malta)", description: "Demetrio Aguilera Malta publica 'La isla virgen', novela.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela que continúa la exploración del mundo costeño e insular ecuatoriano. Aguilera Malta muestra la vida en las islas del Golfo de Guayaquil con realismo y sensibilidad poética." },
+  { year: 1935, title: "'Canal Zone' (Demetrio Aguilera Malta)", description: "Demetrio Aguilera Malta publica 'Canal Zone', novela sobre el Canal de Panamá.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela sobre los trabajadores ecuatorianos en la construcción del Canal de Panamá. Denuncia la explotación de trabajadores latinoamericanos por parte del imperialismo estadounidense. Perspectiva internacional del realismo social." },
+  { year: 1937, title: "'Cholos' (Jorge Icaza)", description: "Jorge Icaza publica 'Cholos', novela sobre mestizos y estratificación social.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Explora la situación de los mestizos en la sociedad ecuatoriana. Denuncia racismo y explotación en diferentes niveles de la estratificación social." },
+  { year: 1938, title: "'Hombres sin tiempo' (Alfredo Pareja Diezcanseco)", description: "Alfredo Pareja Diezcanseco publica 'Hombres sin tiempo', novela.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela que explora la condición humana en contextos de explotación y marginalidad. Pareja Diezcanseco consolida su estilo narrativo combinando denuncia social con reflexión filosófica." },
+  { year: 1942, title: "'Nuestro Pan' (Enrique Gil Gilbert)", description: "Enrique Gil Gilbert publica 'Nuestro Pan', novela sobre trabajadores arroceros.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela sobre trabajadores arroceros de la costa. Denuncia la explotación laboral y condiciones inhumanas en haciendas arroceras. Una de las mejores novelas del realismo social ecuatoriano. Combina protesta social con calidad literaria." },
+  { year: 1943, title: "'Juyungo' (Adalberto Ortiz)", description: "Adalberto Ortiz publica 'Juyungo', novela pionera de la literatura afroecuatoriana.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Primera gran novela sobre la experiencia afroecuatoriana en Esmeraldas. Combina denuncia social con elementos culturales afros. Ortiz también fue poeta y artista plástico." },
+  { year: 1944, title: "'Las tres ratas' (Alfredo Pareja Diezcanseco)", description: "Alfredo Pareja Diezcanseco publica 'Las tres ratas', novela.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela que continúa la exploración de temas sociales y políticos. Pareja Diezcanseco muestra su madurez como narrador del realismo social ecuatoriano." },
+  { year: 1946, title: "'Las cruces sobre el agua' (Joaquín Gallegos Lara)", description: "Publicación póstuma de 'Las cruces sobre el agua' de Joaquín Gallegos Lara.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Novela póstuma sobre la Masacre de Trabajadores de 1922 en Guayaquil. Gallegos Lara (1909-1947) fue cofundador del Grupo de Guayaquil. Su novela reconstruye uno de los episodios más trágicos de la historia obrera ecuatoriana. Militante comunista comprometido con causas sociales." },
+  { year: 1947, title: "Joaquín Gallegos Lara (muere)", description: "Fallece Joaquín Gallegos Lara (1909-1947), cofundador del Grupo de Guayaquil.", category: "realismo", color: "#9B7653", period: "Realismo Social (1930-1950)", details: "Muere el autor de 'Las cruces sobre el agua' y coautor de 'Los que se van'. Dejó una obra fundamental para el realismo social ecuatoriano. Militante comunista que vivió comprometido con las luchas obreras." },
+  { year: 1948, title: "'Huairapamushcas' (Jorge Icaza)", description: "Jorge Icaza publica 'Huairapamushcas', novela sobre migración indígena.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "El título significa 'hijos del viento' en quichua. Narra la migración de indígenas desde comunidades rurales hacia Quito. Icaza explora la desintegración cultural y explotación urbana." },
+  { year: 1952, title: "'Seis relatos' (Jorge Icaza)", description: "Jorge Icaza publica 'Seis relatos', colección de cuentos.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Colección de cuentos que muestra la versatilidad narrativa de Icaza. Continúa explorando temas de injusticia social, explotación indígena y conflictos de clase en Ecuador." },
+  { year: 1993, title: "Alfredo Pareja Diezcanseco (muere)", description: "Fallece Alfredo Pareja Diezcanseco (1907-1993), gran narrador del realismo social.", category: "realismo", color: "#9B7653", period: "Realismo Social (1930-1950)", details: "Muere a los 86 años uno de los grandes escritores ecuatorianos del siglo XX. Dejó un legado de novelas, ensayos e historia literaria. Testigo de casi todo el siglo XX ecuatoriano." },
+  { year: 1909, title: "Joaquín Gallegos Lara (nace)", description: "Nacimiento de Joaquín Gallegos Lara, cofundador del Grupo de Guayaquil.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Escritor y militante comunista que será uno de los fundadores del realismo social ecuatoriano. Coautor de 'Los que se van' (1930) y autor de 'Las cruces sobre el agua'." },
+  { year: 1909, title: "Demetrio Aguilera Malta (nace)", description: "Nacimiento de Demetrio Aguilera Malta, narrador del Grupo de Guayaquil.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Será uno de los fundadores del Grupo de Guayaquil. Su obra combinará realismo social con elementos míticos. También dramaturgo y diplomático." },
+  { year: 1912, title: "Enrique Gil Gilbert (nace)", description: "Nacimiento de Enrique Gil Gilbert, narrador del Grupo de Guayaquil.", category: "realismo", color: "#CD5C5C", period: "Realismo Social (1930-1950)", details: "Será uno de los fundadores del Grupo de Guayaquil y autor de 'Nuestro Pan'. Militante comunista comprometido con las luchas sociales." },
+  { year: 1973, title: "Muerte de Enrique Gil Gilbert", description: "Fallece Enrique Gil Gilbert (1912-1973), miembro del Grupo de Guayaquil.", category: "realismo", color: "#9B7653", period: "Realismo Social (1930-1950)", details: "Muere uno de los fundadores del realismo social ecuatoriano. Autor de 'Nuestro Pan' (1942) y coautor de 'Los que se van'. Militante comunista comprometido con causas sociales." },
   { year: 2003, title: "Muerte de Adalberto Ortiz", description: "Fallece Adalberto Ortiz (1914-2003), pionero de la literatura afroecuatoriana.", category: "realismo", color: "#9B7653", period: "Realismo Social (1930-1950)", details: "Muere el autor de 'Juyungo'. Dejó un legado fundamental para la literatura afroecuatoriana y el reconocimiento de la identidad afrodescendiente en Ecuador." },
   { year: 2009, title: "Muerte de Nelson Estupiñán Bass", description: "Fallece Nelson Estupiñán Bass (1910-2009), escritor afroecuatoriano.", category: "realismo", color: "#9B7653", period: "Realismo Social (1930-1950)", details: "Muere a los 98 años el gran narrador de la experiencia afroecuatoriana. Su obra abarcó novela, poesía y ensayo. Testigo de casi todo el siglo XX ecuatoriano." },
   
@@ -74,11 +98,11 @@ const literatureEvents = [
   { year: 1962, title: "'Los que se van' (reedición)", description: "Reedición de 'Los que se van', obra fundacional del Grupo de Guayaquil.", category: "sigloxx", color: "#4682B4", period: "Mediados Siglo XX (1950-1980)", details: "Nueva edición de la colección de relatos de Gallegos Lara, Aguilera Malta y Gil Gilbert que marcó el inicio del realismo social ecuatoriano en 1930." },
   { year: 1963, title: "Jorge Enrique Adoum", description: "Jorge Enrique Adoum (1926-2009), poeta comprometido políticamente, publica sus grandes poemarios.", category: "sigloxx", color: "#4682B4", period: "Mediados Siglo XX (1950-1980)", details: "Secretario de Pablo Neruda. Su poesía combina compromiso social con experimentación formal. Obras importantes: 'Los cuadernos de la tierra', 'No son todos los que están'. También novelista." },
   { year: 1967, title: "'Entre Marx y una mujer desnuda'", description: "Jorge Enrique Adoum publica esta novela experimental sobre la izquierda latinoamericana.", category: "sigloxx", color: "#4682B4", period: "Mediados Siglo XX (1950-1980)", details: "Novela que reflexiona sobre militancia política, amor e identidad. Combina experimentación formal con crítica social. Una de las novelas ecuatorianas más importantes del siglo XX." },
-  { year: 1973, title: "'Bruna, soroche y los tíos'", description: "Alicia Yánez Cossío publica esta novela, renovación de la voz femenina en la narrativa ecuatoriana.", category: "sigloxx", color: "#4682B4", period: "Mediados Siglo XX (1950-1980)", details: "Yánez Cossío introduce perspectiva feminista y humor en la literatura ecuatoriana. Esta novela combina crítica social con experimentación narrativa. Autora prolífica que renueva temas indigenistas desde óptica femenina." },
+  { year: 1973, title: "'Bruna, soroche y los tíos' (Alicia Yánez Cossío)", description: "Alicia Yánez Cossío publica esta novela, renovación de la voz femenina en la narrativa ecuatoriana.", category: "sigloxx", color: "#4682B4", period: "Mediados Siglo XX (1950-1980)", details: "Yánez Cossío introduce perspectiva feminista y humor en la literatura ecuatoriana. Esta novela combina crítica social con experimentación narrativa. Autora prolífica que renueva temas indigenistas desde óptica femenina." },
   { year: 1975, title: "María Fernanda Ampuero (nace)", description: "Nacimiento de María Fernanda Ampuero, narradora contemporánea de gran impacto.", category: "contemporaneo", color: "#2E8B57", period: "Contemporáneo (1980-2025)", details: "Autora de 'Pelea de gallos' (2019) y 'Sacrificios humanos' (2010). Su narrativa explora violencia, cuerpo femenino y memoria. Reconocimiento internacional creciente." },
   
   // Contemporáneo
-  { year: 1979, title: "'Ciudad de invierno'", description: "Abdón Ubidia publica 'Ciudad de invierno', hito de la narrativa urbana ecuatoriana contemporánea.", category: "contemporaneo", color: "#2E8B57", period: "Contemporáneo (1980-2025)", details: "Marca el paso de literatura rural/indigenista a temática urbana. Retrata Quito moderno con sus conflictos, violencia y búsquedas existenciales. Ubidia es también ensayista clave para entender literatura ecuatoriana contemporánea." },
+  { year: 1979, title: "'Ciudad de invierno' (Abdón Ubidia)", description: "Abdón Ubidia publica 'Ciudad de invierno', hito de la narrativa urbana ecuatoriana contemporánea.", category: "contemporaneo", color: "#2E8B57", period: "Contemporáneo (1980-2025)", details: "Marca el paso de literatura rural/indigenista a temática urbana. Retrata Quito moderno con sus conflictos, violencia y búsquedas existenciales. Ubidia es también ensayista clave para entender literatura ecuatoriana contemporánea." },
   { year: 1980, title: "Mónica Ojeda (nace)", description: "Nacimiento de Mónica Ojeda, una de las voces más importantes de la literatura latinoamericana actual.", category: "contemporaneo", color: "#2E8B57", period: "Contemporáneo (1980-2025)", details: "Autora de 'Mandíbula' (2014), 'Nefando' (2017), 'Las voladoras' (2020). Su narrativa explora violencia, género, terror y adolescencia. Reconocimiento internacional destacado." },
   { year: 1981, title: "'Las tres ratas'", description: "Alicia Yánez Cossío publica 'Las tres ratas', novela sobre dictadura y represión.", category: "contemporaneo", color: "#2E8B57", period: "Contemporáneo (1980-2025)", details: "Novela alegórica sobre el poder y la opresión. Yánez Cossío consolida su posición como una de las narradoras más importantes de Ecuador con perspectiva feminista." },
   { year: 1985, title: "Santiago Páez (nace)", description: "Nacimiento de Santiago Páez, narrador contemporáneo de temática urbana.", category: "contemporaneo", color: "#2E8B57", period: "Contemporáneo (1980-2025)", details: "Autor de 'Plegarias nocturnas' (2007). Su narrativa explora marginalidad urbana, violencia y sexualidad. Parte de nueva generación que renovó literatura ecuatoriana en siglo XXI." },
@@ -171,7 +195,7 @@ const historyEvents = [
   { year: 1978, title: "Nueva Constitución", description: "Referéndum aprueba nueva Constitución en transición a democracia.", category: "sigloxx", color: "#20B2AA", period: "Retorno Democracia", details: "Preparación para elecciones. Sufragio universal (incluyendo analfabetos). Fortalece institucionalidad democrática." },
   
   // Democracia Contemporánea
-  { year: 1979, title: "Retorno a Democracia", description: "Jaime Roldós Aguilera asume presidencia (10 agosto). Retorno a democracia tras dictadura militar.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Elección democrática con 68% de votos. Gobierno joven y reformista. Énfasis en derechos humanos, alfabetización, vivienda popular. Conflicto con Congreso conservador." },
+  { year: 1979, title: "Retorno a la Democracia (nueva constitución)", description: "Jaime Roldós Aguilera asume presidencia (10 agosto). Retorno a democracia tras dictadura militar.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Elección democrática con 68% de votos. Gobierno joven y reformista. Énfasis en derechos humanos, alfabetización, vivienda popular. Conflicto con Congreso conservador." },
   { year: 1981, title: "Conflicto Paquisha & Muerte Roldós", description: "Conflicto con Perú en Paquisha. Muerte de Roldós en accidente aéreo (24 mayo).", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Tensión fronteriza en Cordillera del Cóndor. Misterioso accidente aéreo mata a Roldós, su esposa y comitiva en Loja. Teorías de conspiración persisten: ¿accidente o sabotaje? Fin abrupto de gobierno reformista." },
   { year: 1982, title: "Crisis Económica", description: "Crisis de deuda externa. Inicio de décadas de inestabilidad económica (década perdida).", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Caída precio petróleo, deuda externa crece, inflación alta. Ajustes estructurales, austeridad, protestas sociales. Años 80-90 son 'década perdida' latinoamericana." },
   { year: 1995, title: "Guerra del Cenepa", description: "Guerra del Cenepa con Perú (enero-febrero). Conflicto armado intenso, empate militar.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Conflicto bélico corto pero intenso en Cordillera del Cóndor. Ecuador resiste militarmente mejor que en 1941. Victoria táctica ecuatoriana en varios combates. Orgullo nacional restaurado. Negociación posterior conduce a paz definitiva." },
@@ -179,12 +203,12 @@ const historyEvents = [
   { year: 1996, title: "Abdalá Bucaram derrocado", description: "Bucaram destituido por Congreso tras seis meses por 'incapacidad mental'. Crisis institucional.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Gobierno errático y populista. 'Loco que ama'. Medidas económicas impopulares. Levantamiento popular y decisión del Congreso. Marca inicio de período de gran inestabilidad presidencial." },
   { year: 1997, title: "Crisis Política", description: "Período de grave inestabilidad: tres presidentes en una semana (Bucaram-Alarcón-Arteaga).", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Crisis constitucional. Fabian Alarcón asume interinamente. Se convoca Asamblea Constituyente." },
   { year: 1999, title: "Crisis Bancaria", description: "Colapso del sistema bancario. Feriado bancario (marzo). Crisis económica más grave de historia ecuatoriana.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Quiebra de bancos principales. Gobierno congela depósitos. Salvataje bancario. Ahorristas pierden ahorros. Migración masiva (>500,000 ecuatorianos emigran). Pobreza se dispara. Sucre se desploma." },
-  { year: 2000, title: "Dolarización", description: "Ecuador adopta dólar estadounidense como moneda oficial (9 enero). Fin del Sucre.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Medida drástica del presidente Jamil Mahuad ante colapso del Sucre. Estabiliza inflación pero encarece economía. Golpe indígena-militar derroca a Mahuad días después. Gustavo Noboa continúa dolarización." },
+  { year: 2000, title: "Dolarización (adopción del dólar estadounidense)", description: "Ecuador adopta dólar estadounidense como moneda oficial (9 enero). Fin del Sucre.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Medida drástica del presidente Jamil Mahuad ante colapso del Sucre. Estabiliza inflación pero encarece economía. Golpe indígena-militar derroca a Mahuad días después. Gustavo Noboa continúa dolarización." },
   { year: 2000, title: "Golpe indígena (21 enero)", description: "Levantamiento indígena con apoyo de sector militar derroca a Mahuad. Efímero triunvirato.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "CONAIE y coronel Lucio Gutiérrez toman Congreso. Breve triunvirato de salvación nacional. Presión internacional restaura orden constitucional. Vicepresidente Noboa asume." },
   { year: 2005, title: "Forajidos derrocan Gutiérrez", description: "Protestas ciudadanas en Quito ('Rebelión de los Forajidos') fuerzan renuncia del presidente Lucio Gutiérrez.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Gutiérrez, ex-golpista electo (2003), destituye Corte Suprema. Clase media quiteña se levanta. Congreso destituye a Gutiérrez por 'abandono del cargo'. Alfredo Palacio asume. Entre 1996-2005: siete presidentes." },
-  { year: 2007, title: "Rafael Correa (presidente)", description: "Rafael Correa asume presidencia. Inicio de 'Revolución Ciudadana' y década correista (2007-2017).", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Economista de izquierda. Nueva Constitución (2008): Estado más fuerte, derechos ampliados, reelección. Inversión social masiva, reducción de pobreza. Control de medios, confrontación con oposición. Autoritarismo creciente. Boom de precios de commodities favorece. Corrupción (caso Odebrecht). Estabilidad política tras décadas de inestabilidad." },
+  { year: 2007, title: "Rafael Correa presidente (inicio Revolución Ciudadana)", description: "Rafael Correa asume presidencia. Inicio de 'Revolución Ciudadana' y década correista (2007-2017).", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Economista de izquierda. Nueva Constitución (2008): Estado más fuerte, derechos ampliados, reelección. Inversión social masiva, reducción de pobreza. Control de medios, confrontación con oposición. Autoritarismo creciente. Boom de precios de commodities favorece. Corrupción (caso Odebrecht). Estabilidad política tras décadas de inestabilidad." },
   { year: 2010, title: "Golpe fallido 30-S", description: "Intento de golpe de Estado fallido (30 de septiembre), crisis política.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Sublevación policial el 30 de septiembre. Correa queda retenido en hospital policial. Versión oficial: intento de golpe. Versión opositora: amotinamiento policial sin intención golpista. Ejército rescata a Correa. Evento controvertido que fortaleció a Correa políticamente." },
-  { year: 2008, title: "Nueva Constitución", description: "Referéndum aprueba nueva Constitución. Derechos de la naturaleza, Estado plurinacional.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Constitución progresista: derechos de Pachamama, sumak kawsay (buen vivir), Estado plurinacional. Ampliación de derechos sociales. Fortalecimiento del Ejecutivo. Permite reelección presidencial." },
+  { year: 2008, title: "Nueva Constitución (derechos de la naturaleza)", description: "Referéndum aprueba nueva Constitución. Derechos de la naturaleza, Estado plurinacional.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Constitución progresista: derechos de Pachamama, sumak kawsay (buen vivir), Estado plurinacional. Ampliación de derechos sociales. Fortalecimiento del Ejecutivo. Permite reelección presidencial." },
   { year: 2017, title: "Lenín Moreno (presidente)", description: "Lenín Moreno, delfín de Correa, asume pero rompe con él. Giro político moderado.", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Moreno era vicepresidente de Correa (2007-2013). Elegido como continuador pero da giro. Investigación de corrupción correista. Correa huye a Bélgica, es condenado en ausencia. Referéndum limita reelección indefinida. Crisis económica. Paro nacional octubre 2019. Pandemia COVID-19 (2020) golpea duramente con colapso sanitario en Guayaquil." },
   { year: 2019, title: "Paro Nacional Octubre 2019", description: "Levantamiento indígena y paro nacional contra Decreto 883 (eliminación de subsidios).", category: "democracia", color: "#32CD32", period: "Democracia (1979-2025)", details: "Moreno elimina subsidio a combustibles (FMI). CONAIE y movimientos sociales paralizan país durante 11 días. Violenta represión policial y militar. Gobierno abandona Quito temporalmente. Decreto es derogado tras diálogo. Muestra fuerza del movimiento indígena y crisis de gobernabilidad." },
   { year: 2021, title: "Guillermo Lasso (presidente)", description: "Guillermo Lasso, banquero de centroderecha, asume presidencia tras derrotar a correísta Andrés Araúz.", category: "democracia", color: "#32CD32", period: "Democracia (2021-2025)", details: "Primera alternancia derecha después de correísmo. Vacunación masiva COVID. Crisis de seguridad se agrava: narcoviolencia, cárteles mexicanos operando en Ecuador. Ola de asesinatos, explosiones. Deterioro de sistema carcelario." },
@@ -486,17 +510,65 @@ function renderEvents(containerId, events) {
   // CRITICAL: Use GLOBAL timeline scale for synchronization
   // All tracks use the same year range (1500-2025) so events align vertically
   
+  // GROUP EVENTS BY YEAR for spacing management
+  const eventsByYear = {};
+  events.forEach(event => {
+    if (!eventsByYear[event.year]) {
+      eventsByYear[event.year] = [];
+    }
+    eventsByYear[event.year].push(event);
+  });
+  
+  // Assign both vertical AND horizontal offsets to prevent overlapping
+  Object.keys(eventsByYear).forEach(year => {
+    const eventsInYear = eventsByYear[year];
+    if (eventsInYear.length > 1) {
+      // Multiple events in same year - space them both vertically AND horizontally
+      eventsInYear.forEach((event, index) => {
+        // Alternate above and below timeline, with increasing distance
+        const isAbove = index % 2 === 0;
+        const stackLevel = Math.floor(index / 2);
+        event.verticalOffset = (isAbove ? -1 : 1) * (100 + stackLevel * 80);
+        
+        // Add horizontal offset to prevent marker overlap
+        const totalEvents = eventsInYear.length;
+        const horizontalSpread = 25; // pixels between each event
+        event.horizontalOffset = ((index - (totalEvents - 1) / 2) * horizontalSpread);
+        
+        event.isDense = true; // Mark as part of dense year
+        event.denseCount = eventsInYear.length;
+      });
+    } else {
+      // Single event - no offset needed
+      eventsInYear[0].verticalOffset = 0;
+      eventsInYear[0].horizontalOffset = 0;
+      eventsInYear[0].isDense = false;
+    }
+  });
+  
   events.forEach(event => {
     const eventEl = document.createElement('div');
     eventEl.className = 'timeline-event';
     eventEl.dataset.category = event.category;
     eventEl.dataset.year = event.year;
     
+    // Add dense year indicator
+    if (event.isDense) {
+      eventEl.classList.add('dense-year-event');
+      eventEl.title = `${event.denseCount} eventos en ${event.year}`;
+    }
+    
     // Calculate position using GLOBAL scale (ensures synchronization)
     // Position based on exact year from 1500 to 2025
     const position = ((event.year - TIMELINE_START_YEAR) / TIMELINE_RANGE) * 90; // 90% to leave margin
-    eventEl.style.left = position + '%';
-    eventEl.style.top = '50%';
+    
+    // Apply horizontal offset for events in same year
+    const horizontalOffset = event.horizontalOffset || 0;
+    eventEl.style.left = `calc(${position}% + ${horizontalOffset}px)`;
+    
+    // Apply vertical offset if events overlap in same year
+    const verticalOffset = event.verticalOffset || 0;
+    eventEl.style.top = `calc(50% + ${verticalOffset}px)`;
     eventEl.style.transform = 'translateY(-50%)';
     
     const marker = document.createElement('div');
@@ -505,12 +577,99 @@ function renderEvents(containerId, events) {
     
     const label = document.createElement('div');
     label.className = 'event-label';
-    label.innerHTML = `<span class="event-year">${event.year < 0 ? Math.abs(event.year) + ' a.C.' : event.year}</span>${event.title}`;
+    
+    // Calculate dynamic width based on title length
+    const titleLength = event.title.length;
+    let cardWidth = 200; // default
+    if (titleLength > 40) {
+      cardWidth = 280;
+    } else if (titleLength > 25) {
+      cardWidth = 240;
+    }
+    label.style.minWidth = cardWidth + 'px';
+    
+    // Create title with proper structure
+    const yearSpan = `<span class="event-year">${event.year < 0 ? Math.abs(event.year) + ' a.C.' : event.year}</span>`;
+    const titleSpan = `<span class="event-title">${event.title}</span>`;
+    label.innerHTML = yearSpan + titleSpan;
+    
+    // Add full title as tooltip
+    const tooltipText = `${event.year}: ${event.title}\n${event.description}`;
+    label.setAttribute('title', tooltipText);
+    eventEl.setAttribute('title', tooltipText);
+    
+    // Add connector line if vertically offset
+    if (verticalOffset !== 0) {
+      const connector = document.createElement('div');
+      connector.className = 'event-connector';
+      connector.style.cssText = `
+        position: absolute;
+        left: 50%;
+        width: 2px;
+        background: ${event.color};
+        opacity: 0.4;
+        transform: translateX(-50%);
+      `;
+      
+      if (verticalOffset > 0) {
+        // Below timeline
+        connector.style.top = '0';
+        connector.style.height = Math.abs(verticalOffset) + 'px';
+      } else {
+        // Above timeline
+        connector.style.bottom = '0';
+        connector.style.height = Math.abs(verticalOffset) + 'px';
+      }
+      
+      eventEl.appendChild(connector);
+    }
     
     eventEl.appendChild(marker);
     eventEl.appendChild(label);
     
+    // Add click event
     eventEl.addEventListener('click', () => showEventModal(event));
+    
+    // Add custom hover tooltip
+    let tooltipElement = null;
+    
+    eventEl.addEventListener('mouseenter', (e) => {
+      // Create custom tooltip
+      tooltipElement = document.createElement('div');
+      tooltipElement.className = 'custom-tooltip';
+      tooltipElement.innerHTML = `
+        <strong>${event.year}: ${event.title}</strong>
+        ${event.description}
+        <small>Haz clic para ver más detalles</small>
+      `;
+      document.body.appendChild(tooltipElement);
+      
+      // Position near cursor
+      const rect = eventEl.getBoundingClientRect();
+      const tooltipRect = tooltipElement.getBoundingClientRect();
+      
+      let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+      let top = rect.top - tooltipRect.height - 10;
+      
+      // Adjust if tooltip goes off screen
+      if (left < 10) left = 10;
+      if (left + tooltipRect.width > window.innerWidth - 10) {
+        left = window.innerWidth - tooltipRect.width - 10;
+      }
+      if (top < 10) {
+        top = rect.bottom + 10; // Show below if no room above
+      }
+      
+      tooltipElement.style.left = left + 'px';
+      tooltipElement.style.top = top + 'px';
+    });
+    
+    eventEl.addEventListener('mouseleave', () => {
+      if (tooltipElement) {
+        tooltipElement.remove();
+        tooltipElement = null;
+      }
+    });
     
     container.appendChild(eventEl);
   });
@@ -586,10 +745,14 @@ function getImportanceNote(event) {
     'Eugenio Espejo': 'Espejo representa el pensamiento ilustrado en América colonial. Su obra sentó las bases del pensamiento crítico ecuatoriano y anticipa la independencia.',
     'Cumandá': 'Primera gran novela ecuatoriana con proyección internacional. Establece el indigenismo romántico como tema central de la literatura nacional.',
     'Huasipungo': 'Obra cumbre del indigenismo ecuatoriano. Denuncia brutal de explotación indígena que impactó internacionalmente y marcó el realismo social latinoamericano.',
+    'Los Sangurimas': 'Considerada antecedente de la novela total latinoamericana. José de la Cuadra anticipa técnicas del boom con su complejidad narrativa y estructura carnavalesca. Obra maestra del realismo social montuvio.',
+    'Nuestro Pan': 'Una de las mejores novelas del realismo social ecuatoriano. Combina denuncia de la explotación laboral con alta calidad literaria. Enrique Gil Gilbert retrata magistralmente la vida de los trabajadores arroceros.',
+    'Baldomera': 'Novela pionera que da voz protagónica a una mujer afroecuatoriana. Alfredo Pareja Diezcanseco rompe estereotipos raciales y de género, presentando un personaje con profundidad psicológica sin precedentes en la literatura ecuatoriana.',
     'Generación Decapitada': 'Renovación modernista de la poesía ecuatoriana. Introduce simbolismo y temáticas existenciales. Su trágico destino los convirtió en mito literario.',
     'Batalla de Pichincha': 'Independencia definitiva de Ecuador del imperio español. Marca el inicio de la vida republicana y la construcción de la identidad nacional.',
     'Masacre de trabajadores': 'Punto de inflexión en la historia social ecuatoriana. Marca el fin del liberalismo progresista y el surgimiento del movimiento obrero organizado.',
     'Dolarización': 'Cambio económico más radical en la historia reciente. Estabilizó la economía pero limitó soberanía monetaria.',
+    'Grupo de Guayaquil': 'Movimiento fundacional del realismo social ecuatoriano. José de la Cuadra, Joaquín Gallegos Lara, Enrique Gil Gilbert, Demetrio Aguilera Malta y Alfredo Pareja Diezcanseco renovaron la narrativa ecuatoriana con compromiso social y calidad literaria.',
   };
   
   // Check if event title contains any key phrases
@@ -607,7 +770,7 @@ function getImportanceNote(event) {
   } else if (event.category === 'modernismo') {
     return 'El modernismo renovó la estética literaria ecuatoriana, incorporando influencias europeas y expresando la angustia existencial.';
   } else if (event.category === 'realismo') {
-    return 'El realismo social ecuatoriano denunció injusticias y dio voz a sectores marginados: indígenas, campesinos, afrodescendientes.';
+    return 'El realismo social ecuatoriano (1930-1950) denunció injusticias y dio voz a sectores marginados: indígenas, montuvios, trabajadores urbanos y afrodescendientes. El Grupo de Guayaquil (De la Cuadra, Gallegos Lara, Gil Gilbert, Aguilera Malta, Pareja Diezcanseco) y Jorge Icaza son sus máximos exponentes.';
   } else if (event.category === 'contemporaneo') {
     return 'La literatura ecuatoriana contemporánea se caracteriza por diversidad temática, experimentación formal y creciente reconocimiento internacional.';
   }
