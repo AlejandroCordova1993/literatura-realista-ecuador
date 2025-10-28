@@ -1,0 +1,2668 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literatura Realista Ecuatoriana - Presentación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary-brown: #3E2723;
+            --color-secondary-brown: #5D4037;
+            --color-warm-beige: #D7CCC8;
+            --color-light-beige: #BCAAA4;
+            --color-muted-gold: #C9B037;
+            --color-cream: #F5F5DC;
+            --color-off-white: #FAF0E6;
+            --color-dark-text: #2E1B13;
+            --color-medium-text: #4A3428;
+            --shadow-subtle: 0 2px 8px rgba(62, 39, 35, 0.1);
+            --shadow-medium: 0 4px 16px rgba(62, 39, 35, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            line-height: 1.6;
+            color: var(--color-dark-text);
+            background: var(--color-off-white);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(180deg, var(--color-primary-brown) 0%, var(--color-secondary-brown) 100%);
+            color: var(--color-off-white);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .sidebar-header {
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .sidebar-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0;
+            text-align: center;
+        }
+
+        .sidebar-subtitle {
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 0.5rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .nav-menu {
+            padding: 1rem 0;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: var(--color-off-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+            font-weight: 500;
+        }
+
+        .nav-item:hover {
+            background: rgba(255,255,255,0.1);
+            border-left-color: var(--color-muted-gold);
+            color: var(--color-muted-gold);
+        }
+
+        .nav-item.active {
+            background: rgba(255,255,255,0.15);
+            border-left-color: var(--color-muted-gold);
+            color: var(--color-muted-gold);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            background: var(--color-off-white);
+        }
+
+        /* Sections */
+        .section {
+            min-height: 100vh;
+            padding: 4rem 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--color-muted-gold);
+        }
+
+        .section-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .section-subtitle {
+            font-size: 1.5rem;
+            color: var(--color-secondary-brown);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-period {
+            font-size: 1.2rem;
+            color: var(--color-muted-gold);
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--color-primary-brown) 0%, var(--color-secondary-brown) 100%);
+            color: var(--color-off-white);
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="10" fill="%23ffffff" opacity="0.03">📚</text></svg>') repeat;
+            background-size: 100px 100px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            color: var(--color-off-white);
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            color: var(--color-muted-gold);
+            font-size: 1.8rem;
+        }
+
+        .hero-period {
+            color: var(--color-off-white);
+            opacity: 0.9;
+        }
+
+        /* Content Sections Styling */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .content-point {
+            background: rgba(255,255,255,0.9);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--color-muted-gold);
+            box-shadow: var(--shadow-subtle);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .content-point:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .content-point strong {
+            color: var(--color-primary-brown);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-point p {
+            margin: 0;
+        }
+
+        /* Grid Layouts */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .three-column-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Book Cards */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .book-card {
+            background: linear-gradient(145deg, var(--color-off-white), var(--color-cream));
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--color-light-beige);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .book-card::before {
+            content: '📖';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .book-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .book-author {
+            font-size: 1.1rem;
+            color: var(--color-secondary-brown);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-year {
+            color: var(--color-muted-gold);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .book-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--color-medium-text);
+        }
+
+        /* Literary Groups */
+        .groups-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .group-section {
+            background: linear-gradient(135deg, var(--color-warm-beige), var(--color-light-beige));
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .group-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .group-subtitle {
+            font-style: italic;
+            color: var(--color-secondary-brown);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .authors-list {
+            margin-top: 1.5rem;
+        }
+
+        .author-item {
+            background: rgba(255,255,255,0.7);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--color-muted-gold);
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--color-primary-brown);
+            margin-bottom: 0.3rem;
+        }
+
+        .author-work {
+            font-style: italic;
+            color: var(--color-secondary-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .author-contribution {
+            font-size: 0.9rem;
+            color: var(--color-medium-text);
+            line-height: 1.5;
+        }
+
+        /* Characteristics Grid */
+        .characteristics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .characteristic-item {
+            background: var(--color-off-white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-top: 4px solid var(--color-muted-gold);
+            transition: all 0.3s ease;
+        }
+
+        .characteristic-item:hover {
+            background: var(--color-cream);
+            transform: translateY(-2px);
+        }
+
+        .characteristic-title {
+            font-weight: 600;
+            color: var(--color-primary-brown);
+            margin-bottom: 0.8rem;
+        }
+
+        /* Fragment Cards Styling */
+        .fragments-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .fragment-card {
+            background: linear-gradient(145deg, var(--color-off-white), var(--color-cream));
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--color-light-beige);
+            transition: all 0.3s ease;
+        }
+
+        .fragment-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(62, 39, 35, 0.2);
+        }
+
+        .fragment-card-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .fragment-explanation {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--color-medium-text);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .fragment-quote {
+            background: linear-gradient(135deg, #F5F5DC 0%, #FAF0E6 100%);
+            border-left: 4px solid var(--color-muted-gold);
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-dark-text);
+            box-shadow: inset 0 2px 8px rgba(62, 39, 35, 0.08);
+            position: relative;
+            border-radius: 8px;
+        }
+
+        .fragment-quote::before {
+            content: '❝';
+            font-size: 4rem;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            color: var(--color-light-beige);
+            font-family: Georgia, serif;
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .fragment-quote-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .fragment-source {
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+            color: var(--color-secondary-brown);
+            font-style: normal;
+            margin-top: 1rem;
+            font-weight: 600;
+            padding-left: 1rem;
+        }
+
+        .fragment-analysis {
+            margin-top: 1.5rem;
+            padding: 1rem 1.5rem;
+            padding-left: 2rem;
+            border-left: 3px solid var(--color-muted-gold);
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            color: var(--color-medium-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .fragment-analysis::before {
+            content: '→';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--color-muted-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .fragment-context {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-medium-text);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+        }
+
+        .fragment-context strong {
+            color: var(--color-primary-brown);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .obras-clave-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .obras-clave-list li {
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 3px solid var(--color-muted-gold);
+            border-radius: 6px;
+        }
+
+        .obras-clave-list .obra-title {
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            font-style: italic;
+        }
+
+        .obras-clave-list .obra-author {
+            color: var(--color-secondary-brown);
+            font-size: 0.9rem;
+        }
+
+        .obras-clave-list .obra-year {
+            color: var(--color-muted-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Subjects Grid */
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .subject-card {
+            background: linear-gradient(145deg, var(--color-cream), var(--color-warm-beige));
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .subject-card:hover {
+            border-color: var(--color-muted-gold);
+            transform: translateY(-3px);
+        }
+
+        .subject-name {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .subject-context {
+            color: var(--color-muted-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Comparison Table */
+        .comparison-container {
+            margin-top: 2rem;
+        }
+
+        .comparison-intro {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--color-medium-text);
+            margin-bottom: 2rem;
+            text-align: justify;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--color-muted-gold);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--color-cream);
+            box-shadow: var(--shadow-medium);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--color-secondary-brown) 0%, var(--color-primary-brown) 100%);
+            color: var(--color-off-white);
+            padding: 1.2rem 1rem;
+            font-family: 'Crimson Text', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: left;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .comparison-table th:last-child {
+            border-right: none;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border: 1px solid var(--color-light-beige);
+            vertical-align: top;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: rgba(250, 240, 230, 0.5);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(215, 204, 200, 0.3);
+        }
+
+        .comparison-table td:first-child {
+            background: rgba(215, 204, 200, 0.4);
+            font-weight: 500;
+        }
+
+        .comparison-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--color-primary-brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            background: var(--color-off-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .comparison-column {
+            padding: 1.5rem;
+        }
+
+        .comparison-column:first-child {
+            background: var(--color-warm-beige);
+        }
+
+        .comparison-header {
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .comparison-list {
+            list-style: none;
+        }
+
+        .comparison-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1rem;
+            position: relative;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .comparison-list li::before {
+            content: '▪';
+            position: absolute;
+            left: 0;
+            color: var(--color-muted-gold);
+            font-weight: bold;
+        }
+
+        /* Legacy Section */
+        .legacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .legacy-item {
+            background: linear-gradient(135deg, var(--color-off-white), var(--color-cream));
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-subtle);
+            border-left: 5px solid var(--color-muted-gold);
+            transition: all 0.3s ease;
+        }
+
+        .legacy-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .legacy-item-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 1rem;
+        }
+
+        /* Example Cards Styles */
+        .examples-section { margin-top: 1.5rem; }
+        .examples-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+        .examples-subtitle { font-family: 'Crimson Text', serif; font-size: 1.4rem; font-weight: 600; color: var(--color-primary-brown); }
+        .toggle-btn { background: var(--color-secondary-brown); color: var(--color-off-white); border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; box-shadow: var(--shadow-subtle); transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease; font-weight: 600; }
+        .toggle-btn:hover { background: var(--color-primary-brown); transform: translateY(-1px); box-shadow: var(--shadow-medium); }
+
+        .example-grid { display: grid; gap: 1.25rem; }
+        .example-grid.three-col { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+        .example-grid.two-col { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+        .example-card { background: linear-gradient(145deg, var(--color-off-white), var(--color-cream)); border: 1px solid var(--color-light-beige); border-radius: 12px; box-shadow: var(--shadow-subtle); padding: 1.25rem; position: relative; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .example-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-medium); }
+        .example-card::before, .example-card::after { content: '❦'; position: absolute; font-size: 22px; color: var(--color-light-beige); opacity: 0.25; }
+        .example-card::before { top: 10px; left: 12px; }
+        .example-card::after { bottom: 8px; right: 12px; transform: rotate(180deg); }
+
+        .example-label { font-size: 0.8rem; letter-spacing: 0.06em; font-weight: 700; color: var(--color-secondary-brown); margin-bottom: 0.5rem; }
+        .example-work { font-style: italic; font-weight: 700; color: var(--color-primary-brown); }
+        .example-author { color: var(--color-secondary-brown); font-size: 0.95rem; margin-bottom: 0.75rem; }
+        .example-author small { font-style: italic; color: var(--color-medium-text); }
+
+        .quote-box { background: var(--color-cream); border: 1px solid var(--color-light-beige); border-radius: 10px; padding: 1rem 1.25rem; position: relative; margin-bottom: 0.75rem; box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); }
+        .quote-box::before { content: '“'; position: absolute; top: -6px; left: 10px; font-size: 42px; color: var(--color-light-beige); opacity: 0.6; line-height: 1; }
+        .quote-box::after { content: '”'; position: absolute; bottom: -18px; right: 12px; font-size: 42px; color: var(--color-light-beige); opacity: 0.6; line-height: 1; }
+        .quote-text { font-family: 'Crimson Text', serif; font-style: italic; color: var(--color-dark-text); font-size: 1.02rem; line-height: 1.8; position: relative; z-index: 1; }
+
+        .analysis-box { background: var(--color-off-white); border-left: 4px solid var(--color-muted-gold); border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.95rem; color: var(--color-medium-text); }
+        .analysis-box strong { color: var(--color-primary-brown); }
+
+        .synthesis-note { margin-top: 1rem; background: var(--color-off-white); border: 1px dashed var(--color-light-beige); border-left: 5px solid var(--color-muted-gold); padding: 1rem 1.25rem; font-weight: 600; color: var(--color-primary-brown); font-style: italic; border-radius: 10px; box-shadow: var(--shadow-subtle); }
+
+        .decorative-divider { height: 1px; background: repeating-linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0) 8px, var(--color-light-beige) 8px, var(--color-light-beige) 16px); margin: 2rem 0; opacity: 0.6; }
+
+        .hidden { display: none; }
+
+        /* Group Description Styles */
+        .grupo-descripcion {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--color-medium-text);
+            margin-bottom: 2rem;
+            text-align: justify;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--color-muted-gold);
+        }
+
+        .grupo-section-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .enfoque-list,
+        .caracteristicas-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 2rem 0;
+        }
+
+        .enfoque-list li,
+        .caracteristicas-list li {
+            padding: 0.75rem 1rem 0.75rem 2rem;
+            margin-bottom: 0.75rem;
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 3px solid var(--color-muted-gold);
+            border-radius: 6px;
+            position: relative;
+            line-height: 1.6;
+            color: var(--color-medium-text);
+        }
+
+        .enfoque-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0.75rem;
+            color: var(--color-muted-gold);
+            font-weight: bold;
+        }
+
+        .caracteristicas-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0.75rem;
+            color: var(--color-muted-gold);
+            font-weight: bold;
+        }
+
+        .obra-fundacional-box {
+            background: linear-gradient(135deg, #FAF0E6 0%, #F5F5DC 100%);
+            border: 2px solid var(--color-muted-gold);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0 2rem 0;
+            box-shadow: 0 2px 8px rgba(62, 39, 35, 0.1);
+        }
+
+        .obra-fundacional-box h4 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.3rem;
+            color: var(--color-primary-brown);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .obra-title-main {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--color-secondary-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .obra-details {
+            font-size: 0.95rem;
+            color: var(--color-muted-gold);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .obra-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--color-medium-text);
+        }
+
+        .context-box,
+        .identity-box {
+            border-left: 4px solid var(--color-muted-gold);
+            background: rgba(250, 240, 230, 0.5);
+            padding: 1.5rem;
+            margin: 1.5rem 0 2rem 0;
+            font-style: italic;
+            color: var(--color-medium-text);
+            border-radius: 6px;
+            line-height: 1.7;
+        }
+
+        .context-box h4,
+        .identity-box h4 {
+            font-family: 'Crimson Text', serif;
+            font-style: normal;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .legacy-statement {
+            font-weight: 500;
+            color: var(--color-secondary-brown);
+            padding: 1.5rem;
+            border-top: 2px solid var(--color-muted-gold);
+            border-bottom: 2px solid var(--color-muted-gold);
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .legacy-statement strong {
+            color: var(--color-primary-brown);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .grupo-divider {
+            height: 2px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--color-muted-gold) 0px,
+                var(--color-muted-gold) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+            margin: 3rem 0;
+            opacity: 0.5;
+        }
+
+        /* Authors Section Styles */
+        .authors-section {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-off-white) 100%);
+        }
+
+        .authors-group {
+            margin-bottom: 4rem;
+        }
+
+        .group-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--color-muted-gold);
+        }
+
+        .group-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .group-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-secondary-brown);
+            font-style: italic;
+        }
+
+        /* Author Cards Grid */
+        .authors-grid {
+            display: grid;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .authors-grid.two-columns {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        }
+
+        .authors-grid.three-columns {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        /* Individual Author Card */
+        .author-card {
+            background: linear-gradient(145deg, var(--color-off-white), var(--color-cream));
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease;
+            border: 1px solid var(--color-light-beige);
+            position: relative;
+        }
+
+        .author-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 125, 107, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 125, 107, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .author-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(62, 39, 35, 0.2);
+        }
+
+        /* Photo Placeholder */
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            padding: 2rem 2rem 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .photo-placeholder {
+            width: 250px;
+            height: 300px;
+            position: relative;
+        }
+
+        .photo-frame {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #f5f5dc, #e6ddd3);
+            border: 8px solid var(--color-secondary-brown);
+            border-radius: 8px;
+            box-shadow: 
+                0 8px 16px rgba(62, 39, 35, 0.2),
+                inset 0 2px 4px rgba(255,255,255,0.3),
+                inset 0 -2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(139, 125, 107, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(139, 125, 107, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .photo-frame::after {
+            content: '📷';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+            opacity: 0.3;
+            color: var(--color-secondary-brown);
+        }
+
+        .photo-text {
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            color: var(--color-secondary-brown);
+            text-align: center;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            opacity: 0.7;
+            z-index: 2;
+            position: relative;
+            padding: 0 1rem;
+        }
+
+        /* Author Information */
+        .author-info {
+            padding: 1rem 2rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .author-name {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-primary-brown);
+            margin-bottom: 0.3rem;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .author-years {
+            font-size: 1.1rem;
+            color: var(--color-muted-gold);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-origin {
+            font-size: 0.95rem;
+            color: var(--color-secondary-brown);
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .author-bio {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--color-dark-text);
+            text-align: justify;
+            margin-bottom: 1.2rem;
+        }
+
+        .author-works,
+        .author-contribution {
+            margin-bottom: 1rem;
+            background: rgba(255,255,255,0.6);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-muted-gold);
+        }
+
+        .author-works h4,
+        .author-contribution h4 {
+            font-family: 'Crimson Text', serif;
+            font-size: 1rem;
+            color: var(--color-primary-brown);
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+
+        .author-works ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .author-works li {
+            margin-bottom: 0.3rem;
+            padding-left: 1.2rem;
+            position: relative;
+            color: var(--color-medium-text);
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .author-works li::before {
+            content: '📚';
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+
+        .author-contribution p {
+            margin: 0;
+            color: var(--color-medium-text);
+            font-weight: 500;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+
+
+        /* Image Placeholder Styles */
+        .image-placeholder {
+            background: linear-gradient(135deg, #F5F5DC 0%, #FAF0E6 100%);
+            border: 3px solid var(--color-secondary-brown);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(93, 64, 55, 0.03) 10px, rgba(93, 64, 55, 0.03) 20px);
+            pointer-events: none;
+        }
+
+        .image-placeholder:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(62, 39, 35, 0.2);
+        }
+
+        .placeholder-icon {
+            font-size: 3rem;
+            color: var(--color-light-beige);
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+
+        .placeholder-text {
+            font-family: 'Crimson Text', serif;
+            font-size: 1rem;
+            color: var(--color-medium-text);
+            text-align: center;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Decorative corners */
+        .image-placeholder::after {
+            content: '✦';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2rem;
+            color: var(--color-muted-gold);
+            opacity: 0.4;
+        }
+
+        /* Size variants */
+        .placeholder-large {
+            width: 100%;
+            height: 400px;
+            margin: 2rem 0;
+        }
+
+        .placeholder-medium {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            margin: 1.5rem auto;
+        }
+
+        .placeholder-book {
+            width: 300px;
+            height: 400px;
+            margin: 1rem;
+        }
+
+        .placeholder-square {
+            width: 100%;
+            height: 350px;
+            margin: 1rem 0;
+        }
+
+        .placeholder-small {
+            width: 250px;
+            height: 300px;
+            margin: 1rem;
+        }
+
+        .placeholder-banner {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            margin: 2rem auto;
+        }
+
+        .placeholders-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        /* Responsive table */
+        @media (max-width: 768px) {
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.8rem 0.5rem;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 250px;
+            }
+            .main-content {
+                margin-left: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .two-column-grid,
+            .three-column-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .authors-grid.two-columns,
+            .authors-grid.three-columns {
+                grid-template-columns: 1fr;
+            }
+            
+            .photo-placeholder {
+                width: 200px;
+                height: 250px;
+            }
+            
+            .author-name {
+                font-size: 1.5rem;
+            }
+            
+            .group-title {
+                font-size: 1.8rem;
+            }
+            
+            .placeholder-large,
+            .placeholder-medium,
+            .placeholder-banner {
+                height: 300px;
+            }
+            
+            .placeholder-book,
+            .placeholder-square {
+                width: 100%;
+                height: 300px;
+            }
+            
+            .placeholder-small {
+                width: 100%;
+                height: 250px;
+            }
+            
+            .fragment-card {
+                padding: 1.5rem;
+            }
+            
+            .fragment-card-title {
+                font-size: 1.4rem;
+            }
+            
+            .fragment-quote {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .fragment-quote::before {
+                font-size: 3rem;
+            }
+
+            /* Mobile menu toggle */
+            .mobile-toggle {
+                display: block;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1001;
+                background: var(--color-primary-brown);
+                color: var(--color-off-white);
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .mobile-toggle {
+            display: none;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Timeline Button */
+        .timeline-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #D4AF37 0%, #8B6914 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+            transition: all 0.4s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 1;
+        }
+
+        .timeline-button.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-20px);
+        }
+
+        .timeline-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
+        }
+
+        .timeline-button::before {
+            content: "📅";
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-button {
+                top: 10px;
+                right: 10px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Timeline Button -->
+    <a href="Línea de tiempo Literatura ecuatoriana/index.html" class="timeline-button" target="_blank" title="Explorar Línea de Tiempo Interactiva" id="timelineBtn">
+        Línea de Tiempo
+    </a>
+    
+    <button class="mobile-toggle" onclick="toggleSidebar()">☰</button>
+    
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1 class="sidebar-title">Literatura Realista Ecuatoriana</h1>
+                <p class="sidebar-subtitle">Generación del 30</p>
+            </div>
+            <div class="nav-menu">
+                <a href="#inicio" class="nav-item active">Inicio</a>
+                <a href="#introduccion" class="nav-item">Introducción</a>
+                <a href="#contexto" class="nav-item">Contexto Histórico</a>
+                <a href="#obras" class="nav-item">Obras Fundacionales</a>
+                <a href="#guayaquil" class="nav-item">Grupo de Guayaquil</a>
+                <a href="#sierra" class="nav-item">Grupo de la Sierra</a>
+                <a href="#caracteristicas" class="nav-item">Características</a>
+                <a href="#sujetos" class="nav-item">Sujetos Representados</a>
+                <a href="#tipos" class="nav-item">Tipos de Realismo</a>
+                <a href="#comparaciones" class="nav-item">Comparaciones</a>
+                <a href="#legado" class="nav-item">Legado</a>
+                <a href="#autores" class="nav-item">Autores</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section id="inicio" class="section hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">LITERATURA REALISTA ECUATORIANA</h1>
+                    <div class="section-subtitle hero-subtitle">La Generación del 30 y el Realismo Social</div>
+                    <div class="section-period hero-period">Apogeo 1920-1950: La Época de Oro de la Narrativa Ecuatoriana</div>
+                    
+                    <!-- Hero Image -->
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <img src="Imagenes/1.png" alt="Contexto Histórico del Realismo Ecuatoriano" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Introducción Section -->
+            <section id="introduccion" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">¿Qué es el Realismo Ecuatoriano?</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="content-point">
+                        <strong>Reacción al romanticismo:</strong>
+                        <p>Movimiento literario que surge como reacción al romanticismo y costumbrismo del siglo XIX.</p>
+                    </div>
+                    <div class="content-point">
+                        <strong>Compromiso social:</strong>
+                        <p>Compromiso con la denuncia social y visibilización de clases marginadas y subalternos.</p>
+                    </div>
+                    <div class="content-point">
+                        <strong>Ruptura estética:</strong>
+                        <p>Ruptura estética que marca la madurez de la narrativa nacional ecuatoriana.</p>
+                    </div>
+                    <div class="content-point">
+                        <strong>Conciencia crítica:</strong>
+                        <p>Literatura como conciencia crítica del periodo post-liberal y transformaciones sociales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contexto Histórico Section -->
+            <section id="contexto" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">CONTEXTO HISTÓRICO</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="content-point">
+                        <strong>Reacción al romanticismo y costumbrismo:</strong>
+                        <p>Surge como respuesta crítica al romanticismo y costumbrismo del siglo XIX.</p>
+                    </div>
+                    <div class="content-point">
+                        <strong>Influencia de la Revolución Liberal:</strong>
+                        <p>Influencia de la Revolución Liberal (1895) y las corrientes socialistas internacionales.</p>
+                    </div>
+                    <div class="content-point">
+                        <strong>Transformaciones sociopolíticas:</strong>
+                        <p>Respuesta a las profundas transformaciones sociopolíticas del Ecuador moderno.</p>
+                    </div>
+                    <div class="content-point">
+                        <strong>Literatura como instrumento:</strong>
+                        <p>La literatura se convierte en instrumento de denuncia social y protesta política.</p>
+                    </div>
+                    <div class="content-point">
+                        <strong>Compromiso con sectores marginados:</strong>
+                        <p>Compromiso ético con la representación de sectores marginados y subalternos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Obras Fundacionales Section -->
+            <section id="obras" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">OBRAS FUNDACIONALES</h2>
+                </div>
+                
+                <!-- Book Covers -->
+                <div class="placeholders-flex">
+                    <div style="margin: 1rem;">
+                        <img src="Imagenes/Portada la emancipada.jpg" alt="Portada de La Emancipada" style="width: 300px; height: 400px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                        <p style="margin-top: 1rem; font-style: italic; color: var(--color-medium-text);">Portada de "La Emancipada"<br>Miguel Riofrío (1863)</p>
+                    </div>
+                    <div style="margin: 1rem;">
+                        <img src="Imagenes/Portada Huasipungo.jpg" alt="Portada de Huasipungo" style="width: 300px; height: 400px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                        <p style="margin-top: 1rem; font-style: italic; color: var(--color-medium-text);">Portada de "Huasipungo"<br>Jorge Icaza (1934)</p>
+                    </div>
+                </div>
+                
+                <div class="three-column-grid">
+                    <div class="book-card">
+                        <div class="book-title">La Emancipada</div>
+                        <div class="book-author">Miguel Riofrío</div>
+                        <div class="book-year">1863</div>
+                        <div class="book-description">Primera novela nacional y pionera del realismo. Denuncia la opresión de género y violencia institucional.</div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-title">A la Costa</div>
+                        <div class="book-author">Luis A. Martínez</div>
+                        <div class="book-year">1904</div>
+                        <div class="book-description">Primera novela realista ecuatoriana. Representa contradicciones regionales y sociales.</div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-title">Los que se van</div>
+                        <div class="book-author">Grupo de Guayaquil</div>
+                        <div class="book-year">1930</div>
+                        <div class="book-description">Detonante del realismo social. Obra colectiva fundacional del movimiento.</div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-title">Huasipungo</div>
+                        <div class="book-author">Jorge Icaza</div>
+                        <div class="book-year">1934</div>
+                        <div class="book-description">Referente continental del indigenismo. Denuncia del sistema hacendario andino.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grupo de Guayaquil Section -->
+            <section id="guayaquil" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">GRUPO DE GUAYAQUIL</h2>
+                    <div class="section-subtitle">"Los Cinco como un Puño"</div>
+                    <div class="section-period">La Costa - El Litoral Ecuatoriano</div>
+                </div>
+                
+                <!-- Grupo de Guayaquil Image -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <img src="Imagenes/Cinco como un puño.png" alt="Los Cinco como un Puño - Grupo de Guayaquil" style="max-width: 600px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                </div>
+                
+                <!-- Descripción Introductoria -->
+                <div class="grupo-descripcion">
+                    El Grupo de Guayaquil, conocido también como "Los Cinco como un Puño", fue el colectivo más cohesionado del movimiento realista ecuatoriano. Este grupo revolucionó la narrativa nacional al centrar su mirada en la cultura del Litoral, rompiendo con la hegemonía de la literatura serrana y dando voz a sectores históricamente marginados.
+                </div>
+
+                <!-- Enfoque Temático -->
+                <h3 class="grupo-section-title">Enfoque Temático</h3>
+                <ul class="enfoque-list">
+                    <li>La cultura montuvia y su identidad regional propia del Litoral</li>
+                    <li>La vida y explotación del obrero urbano (Masacre de Guayaquil 1922)</li>
+                    <li>Las dinámicas de explotación en la agroindustria costeña (arroz, cacao)</li>
+                    <li>La negritud afroecuatoriana de Esmeraldas y el Litoral Norte</li>
+                    <li>El espacio urbano de Guayaquil como escenario de modernización contradictoria</li>
+                </ul>
+
+                <!-- Características Literarias -->
+                <h3 class="grupo-section-title">Características Literarias</h3>
+                <ul class="caracteristicas-list">
+                    <li>Fusión del realismo social con elementos míticos y legendarios</li>
+                    <li>Incorporación auténtica del habla montuvia, jergas populares y modismos costeños</li>
+                    <li>Precursores directos del Realismo Mágico latinoamericano</li>
+                    <li>Uso de figuras de contornos épicos en contextos animistas</li>
+                    <li>Prosa lírica que integra la mitología local (cultura Milagro-Quevedo)</li>
+                </ul>
+
+                <!-- Obra Fundacional -->
+                <div class="obra-fundacional-box">
+                    <h4>OBRA FUNDACIONAL</h4>
+                    <div class="obra-title-main">Los que se van</div>
+                    <div class="obra-details">1930 - Aguilera Malta, Gallegos Lara y Gil Gilbert</div>
+                    <div class="obra-description">
+                        Libro de cuentos escrito colaborativamente que marca la consolidación del realismo social ecuatoriano.
+                    </div>
+                </div>
+
+                <!-- Identidad Cultural -->
+                <div class="identity-box">
+                    <h4>IDENTIDAD CULTURAL</h4>
+                    El Grupo de Guayaquil fue crucial en la construcción y reivindicación de la identidad del Litoral. Al dotar a sus personajes montuvios de fuerzas épicas y míticas, la narrativa costera fusiona la crítica social con la potencia de la identidad regional, elevando a los personajes por encima de la función de mera víctima.
+                </div>
+
+                <!-- Legado -->
+                <div class="legacy-statement">
+                    <strong>LEGADO</strong>
+                    Establecieron las bases del Realismo Mágico al integrar elementos legendarios y míticos en la representación de la realidad rural costeña. Demostraron que ser verdaderamente realista sobre la cultura ecuatoriana exigía integrar estas "realidades abracadabra".
+                </div>
+                
+                <!-- Autores del Grupo -->
+                <h3 class="grupo-section-title">Autores Principales</h3>
+                <div class="group-section">
+                    <div class="authors-list">
+                        <div class="author-item">
+                            <div class="author-name">José de la Cuadra</div>
+                            <div class="author-work">Los Sangurimas</div>
+                            <div class="author-contribution">Precursor del Realismo Mágico. Literatura montuvia.</div>
+                        </div>
+                        <div class="author-item">
+                            <div class="author-name">Joaquín Gallegos Lara</div>
+                            <div class="author-work">Las cruces sobre el agua</div>
+                            <div class="author-contribution">Realismo urbano y obrero. Masacre de 1922.</div>
+                        </div>
+                        <div class="author-item">
+                            <div class="author-name">Demetrio Aguilera Malta</div>
+                            <div class="author-work">Don Goyo</div>
+                            <div class="author-contribution">Realismo mítico. Elementos fantásticos.</div>
+                        </div>
+                        <div class="author-item">
+                            <div class="author-name">Enrique Gil Gilbert</div>
+                            <div class="author-work">Nuestro pan</div>
+                            <div class="author-contribution">Denuncia de explotación arrocera.</div>
+                        </div>
+                        <div class="author-item">
+                            <div class="author-name">Alfredo Pareja Diezcanseco</div>
+                            <div class="author-work">Baldomera</div>
+                            <div class="author-contribution">Reivindicación de grupos marginados.</div>
+                        </div>
+                        <div class="author-item">
+                            <div class="author-name">Adalberto Ortiz</div>
+                            <div class="author-work">Juyungo</div>
+                            <div class="author-contribution">Realismo afroecuatoriano.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grupo de la Sierra Section -->
+            <section id="sierra" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">GRUPO DE LA SIERRA</h2>
+                    <div class="section-subtitle">Los Andes - La Sierra Ecuatoriana</div>
+                    <div class="section-period">Indigenismo y Explotación Andina</div>
+                </div>
+                
+                <!-- Grupo de la Sierra Image -->
+                <div style="text-align: center; margin: 2rem 0;">
+                    <img src="Imagenes/GRUPO DE LA SIERRA.png" alt="Grupo de la Sierra" style="max-width: 600px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                </div>
+                
+                <!-- Descripción Introductoria -->
+                <div class="grupo-descripcion">
+                    El Grupo de la Sierra, aunque menos formalmente estructurado que el Grupo de Guayaquil, se enfocó en los Andes y la denuncia visceral de la explotación indígena en el sistema hacendario. Liderado por Jorge Icaza, este grupo consolidó el indigenismo radical ecuatoriano como corriente fundamental del realismo social.
+                </div>
+
+                <!-- Enfoque Temático -->
+                <h3 class="grupo-section-title">Enfoque Temático</h3>
+                <ul class="enfoque-list">
+                    <li>La explotación sistemática del pueblo indígena en el sistema de hacienda</li>
+                    <li>El sistema de concertaje: forma apenas velada de esclavitud por deudas</li>
+                    <li>La servidumbre, abusos sexuales y violencia institucional contra comunidades andinas</li>
+                    <li>Las relaciones cuasi-feudales en el campo serrano</li>
+                    <li>La resistencia indígena y movimientos sociales (Daquilema, Tránsito Amaguaña, Dolores Cacuango)</li>
+                </ul>
+
+                <!-- Características Literarias -->
+                <h3 class="grupo-section-title">Características Literarias</h3>
+                <ul class="caracteristicas-list">
+                    <li>Narrativa cruda y descarnada de las condiciones materiales de existencia</li>
+                    <li>Estructura narrativa binaria: explotador (hacendado, cura, teniente) vs. explotado (indígena)</li>
+                    <li>Incorporación de expresiones quichuas y reproducción fonética del habla indígena</li>
+                    <li>Tono pesimista que culmina frecuentemente en la derrota del protagonista indígena</li>
+                    <li>Función testimonial y documental de la realidad andina</li>
+                </ul>
+
+                <!-- Obra Paradigmática -->
+                <div class="obra-fundacional-box">
+                    <h4>OBRA PARADIGMÁTICA</h4>
+                    <div class="obra-title-main">Huasipungo</div>
+                    <div class="obra-details">1934 - Jorge Icaza</div>
+                    <div class="obra-description">
+                        Referente continental para la denuncia de la explotación indígena, que representa la lucha del indígena por la tenencia precaria de su tierra.
+                    </div>
+                </div>
+
+                <!-- Contexto Histórico -->
+                <div class="context-box">
+                    <h4>CONTEXTO HISTÓRICO</h4>
+                    El indigenismo literario ecuatoriano respondió a la pervivencia de relaciones cuasi-feudales en el campo serrano. El sistema de concertaje que ataba al indígena a la hacienda mediante deudas impagables constituyó una forma de esclavitud que se mantuvo hasta mediados del siglo XX. La literatura coincidió con la emergencia de figuras clave en la resistencia indígena.
+                </div>
+
+                <!-- Legado -->
+                <div class="legacy-statement">
+                    <strong>LEGADO</strong>
+                    Consolidó el indigenismo radical como eje fundamental de la literatura ecuatoriana y latinoamericana. Estableció el esquema de la dicotomía explotador/explotado que definió la narrativa de denuncia social en los Andes.
+                </div>
+                
+                <!-- Autores del Grupo -->
+                <h3 class="grupo-section-title">Autores Principales</h3>
+                <div class="group-section">
+                    <div class="authors-list">
+                        <div class="author-item">
+                            <div class="author-name">Jorge Icaza</div>
+                            <div class="author-work">Huasipungo</div>
+                            <div class="author-contribution">Figura cumbre del indigenismo ecuatoriano y latinoamericano.</div>
+                        </div>
+                        <div class="author-item">
+                            <div class="author-name">Fernando Chávez</div>
+                            <div class="author-work">Plata y bronce</div>
+                            <div class="author-contribution">Consolidación de la dicotomía explotador/explotado.</div>
+                        </div>
+                        <div class="author-item">
+                            <div class="author-name">Ángel Felicísimo Rojas</div>
+                            <div class="author-work">El éxodo de Yangana</div>
+                            <div class="author-contribution">Realismo tardío de la sierra sur ecuatoriana.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Características Estilísticas Section -->
+            <section id="caracteristicas" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">CARACTERÍSTICAS ESTILÍSTICAS</h2>
+                    <div class="section-subtitle">Fragmentos Literarios que Demuestran Cada Característica</div>
+                </div>
+                
+                <div class="fragments-grid">
+                    <!-- Característica 1: Prosa Clara, Directa y Objetiva -->
+                    <div class="fragment-card">
+                        <h3 class="fragment-card-title">1. Prosa Clara, Directa y Objetiva</h3>
+                        <p class="fragment-explanation">
+                            <strong>Explicación:</strong> El realismo ecuatoriano abandona el sentimentalismo romántico y adopta un estilo descriptivo sin ornamentos, enfocado en mostrar la realidad tal como es.
+                        </p>
+                        <div class="fragment-quote">
+                            <div class="fragment-quote-text">
+                                Salvador se detuvo al borde del camino. A lo lejos, los jornaleros marchaban bajo el sol como una procesión de sombras quemadas. El sudor rodaba con el polvo y el hambre en los ojos se hacía fiebre. Pensó que nada podía cambiar: el patrón dormía mientras los hombres morían en la zafra.
+                            </div>
+                        </div>
+                        <div class="fragment-source">
+                            Fuente: <em>A la costa</em> - Luis A. Martínez (1904)
+                        </div>
+                        <div class="fragment-analysis">
+                            <strong>Análisis:</strong> Este fragmento muestra la descripción objetiva y directa de la realidad sin ornamentos poéticos, enfocándose en la dureza de las condiciones laborales.
+                        </div>
+                    </div>
+
+                    <!-- Característica 2: Ruptura Lingüística -->
+                    <div class="fragment-card">
+                        <h3 class="fragment-card-title">2. Ruptura Lingüística: Uso de Jergas Populares y Modismos Locales</h3>
+                        <p class="fragment-explanation">
+                            <strong>Explicación:</strong> Los autores se rebelaron contra el lenguaje academicista heredado, incorporando el habla auténtica de montuvios, indígenas y obreros para lograr verosimilitud.
+                        </p>
+                        <div class="fragment-quote">
+                            <div class="fragment-quote-text">
+                                Aquí donde me ven, postrado, jodido, sin casi poder levantarme de la hamaca, cuando mozo hacía daño... Le clavaba los ojos a una mujer, y ya estaba... No le quedaba más que templarse en el catre... Hacía raya, amigo!... Me agarraron miedo...
+                            </div>
+                        </div>
+                        <div class="fragment-source">
+                            Fuente: <em>Los Sangurimas</em> - José de la Cuadra (1934)
+                        </div>
+                        <div class="fragment-analysis">
+                            <strong>Análisis:</strong> El lenguaje popular costeño auténtico, con sus modismos y estructura oral, representa la ruptura con el academicismo y da voz genuina al montuvio.
+                        </div>
+                    </div>
+
+                    <!-- Característica 3: Temática de Denuncia Social -->
+                    <div class="fragment-card">
+                        <h3 class="fragment-card-title">3. Temática de Denuncia Social</h3>
+                        <p class="fragment-explanation">
+                            <strong>Explicación:</strong> El realismo social ecuatoriano se caracteriza por la denuncia visceral de la explotación, la injusticia estructural y la opresión de las clases trabajadoras.
+                        </p>
+                        <div class="fragment-quote">
+                            <div class="fragment-quote-text">
+                                El montuvio, machete en mano, cortaba caña y rabia. No había canto. No había esperanza. El capataz gritaba, y en su voz el miedo se volvía orden, y la orden, castigo.
+                            </div>
+                        </div>
+                        <div class="fragment-source">
+                            Fuente: <em>Los que se van</em> - Grupo de Guayaquil (Gallegos Lara, Aguilera Malta, Gil Gilbert) (1930)
+                        </div>
+                        <div class="fragment-analysis">
+                            <strong>Análisis:</strong> Lenguaje directo y descarnado que denuncia la opresión laboral. El pueblo no es objeto decorativo, sino protagonista de su propia historia de sufrimiento.
+                        </div>
+                    </div>
+
+                    <!-- Característica 4: Representación Fiel de la Realidad -->
+                    <div class="fragment-card">
+                        <h3 class="fragment-card-title">4. Representación Fiel de la Realidad (Documentación Rigurosa)</h3>
+                        <p class="fragment-explanation">
+                            <strong>Explicación:</strong> Los autores visitaban los ambientes que describirían, conversaban con los tipos sociales que representaban y tomaban notas para dar sensación de realidad innegable.
+                        </p>
+                        <div class="fragment-quote">
+                            <div class="fragment-quote-text">
+                                Salvador observó a los peones encorvados, sembrando bajo el sol ardiente. El sudor les corría por la espalda, y el capataz, látigo en mano, vigilaba sin descanso. Pensó entonces que la justicia del hombre era solo una palabra hueca, y que el trabajo, en aquella tierra, era una forma de castigo.
+                            </div>
+                        </div>
+                        <div class="fragment-source">
+                            Fuente: <em>A la costa</em> - Luis A. Martínez (1904)
+                        </div>
+                        <div class="fragment-analysis">
+                            <strong>Análisis:</strong> Documentación rigurosa de condiciones laborales reales, con crítica al sistema económico agrario y las relaciones de poder.
+                        </div>
+                    </div>
+
+                    <!-- Característica 5: Función Testimonial -->
+                    <div class="fragment-card">
+                        <h3 class="fragment-card-title">5. Función Testimonial</h3>
+                        <p class="fragment-explanation">
+                            <strong>Explicación:</strong> La literatura realista funcionó como registro histórico y sociológico, documentando eventos traumáticos y la vida de sectores marginados. Los personajes representan grupos humanos enteros, no individuos aislados.
+                        </p>
+                        <div class="fragment-context">
+                            <strong>Obra Paradigmática:</strong> <em>Las cruces sobre el agua</em> - Joaquín Gallegos Lara (1946)
+                        </div>
+                        <div class="fragment-context">
+                            <strong>Contexto Histórico:</strong> Narración de la Masacre de Guayaquil del 15 de noviembre de 1922, donde obreros fueron reprimidos violentamente por el Estado.
+                        </div>
+                        <div class="fragment-analysis">
+                            <strong>Análisis:</strong> Esta obra consolida la función testimonial del realismo como documento histórico clave sobre la represión estatal y la lucha obrera urbana.
+                        </div>
+                    </div>
+
+                    <!-- Característica 6: Incorporación de Elementos Míticos -->
+                    <div class="fragment-card">
+                        <h3 class="fragment-card-title">6. Incorporación de Elementos Míticos (Precursor del Realismo Mágico)</h3>
+                        <p class="fragment-explanation">
+                            <strong>Explicación:</strong> Obras del Grupo de Guayaquil integraron elementos legendarios, míticos y animistas, fusionando la denuncia social con la potencia de la identidad regional y la mitología local.
+                        </p>
+                        <div class="fragment-context">
+                            <strong>Obras Clave:</strong>
+                        </div>
+                        <ul class="obras-clave-list">
+                            <li>
+                                <span class="obra-title">Los Sangurimas</span> - 
+                                <span class="obra-author">José de la Cuadra</span> 
+                                <span class="obra-year">(1934)</span>
+                            </li>
+                            <li>
+                                <span class="obra-title">Don Goyo</span> - 
+                                <span class="obra-author">Demetrio Aguilera Malta</span> 
+                                <span class="obra-year">(1933)</span>
+                            </li>
+                        </ul>
+                        <div class="fragment-context">
+                            <strong>Contexto Literario:</strong> Estas obras presentan figuras de contornos épicos y míticos (el matapalo como símbolo, la tierra como ser vivo, mitología Milagro-Quevedo), anticipando el Realismo Mágico latinoamericano.
+                        </div>
+                        <div class="fragment-analysis">
+                            <strong>Análisis:</strong> La realidad rural ecuatoriana estaba inherentemente ligada a mitos y supersticiones locales. Ser verdaderamente realista requería integrar estas "realidades abracadabra".
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sujetos Representados Section -->
+            <section id="sujetos" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">SUJETOS REPRESENTADOS</h2>
+                </div>
+                <div class="subjects-grid">
+                    <div class="subject-card">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="Imagenes/EL INDÍGENA.png" alt="El Indígena" style="width: 100%; height: 350px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                        </div>
+                        <div class="subject-name">EL INDÍGENA</div>
+                        <div class="subject-context">Sierra - Andes</div>
+                        <div class="subject-description">Sistema de hacienda y concertaje. Explotación sistémica en el mundo andino.</div>
+                    </div>
+                    <div class="subject-card">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="Imagenes/EL MONTUVIO.png" alt="El Montuvio" style="width: 100%; height: 350px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                        </div>
+                        <div class="subject-name">EL MONTUVIO</div>
+                        <div class="subject-context">Costa - Litoral</div>
+                        <div class="subject-description">Identidad regional costeña. Cultura rural del litoral ecuatoriano.</div>
+                    </div>
+                    <div class="subject-card">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="Imagenes/EL OBRERO URBANO.png" alt="El Obrero Urbano" style="width: 100%; height: 350px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                        </div>
+                        <div class="subject-name">EL OBRERO URBANO</div>
+                        <div class="subject-context">Guayaquil - Ciudades</div>
+                        <div class="subject-description">Masacre de 1922, lucha laboral. Proletariado urbano emergente.</div>
+                    </div>
+                    <div class="subject-card">
+                        <div style="margin-bottom: 1rem;">
+                            <img src="Imagenes/EL AFROECUATORIANO.png" alt="El Afroecuatoriano" style="width: 100%; height: 350px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                        </div>
+                        <div class="subject-name">EL AFROECUATORIANO</div>
+                        <div class="subject-context">Esmeraldas - Litoral Norte</div>
+                        <div class="subject-description">Reivindicación y discriminación racial. Cultura afrodescendiente.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tipos de Realismo Section -->
+            <section id="tipos" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">TIPOS DE REALISMO</h2>
+                </div>
+                <div class="characteristics-grid">
+                    <div class="characteristic-item">
+                        <div class="characteristic-title">Realismo Costumbrista</div>
+                        <div class="characteristic-description">Representación de vida cotidiana, costumbres locales y lenguaje regional. Enfoque descriptivo de tradiciones populares.</div>
+                    </div>
+                    <div class="characteristic-item">
+                        <div class="characteristic-title">Realismo Social</div>
+                        <div class="characteristic-description">Denuncia directa de injusticias sociales, explotación laboral y condiciones de grupos vulnerables.</div>
+                    </div>
+                    <div class="characteristic-item">
+                        <div class="characteristic-title">Indigenismo</div>
+                        <div class="characteristic-description">Representación de la explotación de pueblos indígenas y dignificación de sus culturas ancestrales.</div>
+                    </div>
+                    <div class="characteristic-item">
+                        <div class="characteristic-title">Realismo Afroecuatoriano</div>
+                        <div class="characteristic-description">Exploración de la problemática afrodescendiente, procesos de transculturación y discriminación racial.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparaciones Section -->
+            <section id="comparaciones" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">DIFERENCIAS ENTRE MOVIMIENTOS LITERARIOS</h2>
+                </div>
+                
+                <div class="comparison-intro">
+                    El realismo ecuatoriano surgió como respuesta crítica tanto al romanticismo como al costumbrismo que dominaron la literatura del siglo XIX. Para comprender su importancia, es fundamental entender las diferencias fundamentales entre estos tres movimientos que marcaron la evolución de la narrativa nacional.
+                </div>
+
+                <h3 class="comparison-title">ROMANTICISMO vs COSTUMBRISMO vs REALISMO</h3>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspecto</th>
+                            <th>Romanticismo</th>
+                            <th>Costumbrismo</th>
+                            <th>Realismo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Visión del mundo</strong></td>
+                            <td>Subjetiva, idealista, sentimental</td>
+                            <td>Descriptiva, pintoresca</td>
+                            <td>Objetiva, racional, crítica</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Finalidad</strong></td>
+                            <td>Expresar emoción individual, libertad, belleza</td>
+                            <td>Retratar costumbres y tradiciones locales</td>
+                            <td>Analizar y denunciar condiciones sociales</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Personajes</strong></td>
+                            <td>Heroicos, idealizados, trágicos</td>
+                            <td>Tipos sociales estereotipados</td>
+                            <td>Comunes, complejos, representativos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lenguaje</strong></td>
+                            <td>Poético, exaltado, metafórico</td>
+                            <td>Pintoresco, regional, con modismos locales</td>
+                            <td>Claro, directo, verosímil</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Temas centrales</strong></td>
+                            <td>Amor imposible, naturaleza sublime, patriotismo</td>
+                            <td>Vida cotidiana, relaciones inmediatas</td>
+                            <td>Pobreza, desigualdad, conflicto social</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Actitud</strong></td>
+                            <td>Escapista, busca consuelo en la belleza</td>
+                            <td>Contemplativa, evita conflicto social</td>
+                            <td>Comprometida, confronta problemas contemporáneos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Visión de la realidad</strong></td>
+                            <td>Idealismo, espiritualidad</td>
+                            <td>Estática, mundo tradicional</td>
+                            <td>Materialista, documental</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Género dominante</strong></td>
+                            <td>Poesía lírica, novela romántica</td>
+                            <td>Crónica, cuento y miniatura</td>
+                            <td>Novela social, narrativa objetiva</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ejemplo ecuatoriano</strong></td>
+                            <td><em>Cumandá</em> (Juan León Mera, 1879)</td>
+                            <td><em>Cosas de mi tierra</em> (José de la Cuadra)</td>
+                            <td><em>A la costa</em> (Luis A. Martínez, 1904)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 class="grupo-section-title" style="margin-top: 3rem;">EJEMPLOS LITERARIOS</h3>
+                
+                <!-- Ejemplo Romántico -->
+                <div class="fragment-card" style="margin-top: 2rem;">
+                    <h3 class="fragment-card-title">1. EJEMPLO ROMÁNTICO</h3>
+                    <p class="fragment-explanation">
+                        <strong>Obra:</strong> <em>Cumandá</em> - Juan León Mera (1879)
+                    </p>
+                    <div class="fragment-quote">
+                        <div class="fragment-quote-text">
+                            Cumandá, pálida como el lirio, hermosa como la luz del amanecer, miró con sus grandes ojos llenos de lágrimas al joven que amaba. La selva, agitada por el viento, parecía condolerse con ella. ¡Oh amor, fuerza invencible que une almas a pesar de las razas y las leyes de los hombres!
+                        </div>
+                    </div>
+                    <div class="fragment-source">
+                        Fuente: <em>Cumandá</em> - Juan León Mera (1879)
+                    </div>
+                    <div class="fragment-analysis">
+                        <strong>Análisis:</strong> Exalta la emoción y el ideal amoroso. La naturaleza participa del sentimiento humano (personificación). Visión idealista que busca la belleza, la pureza y el heroísmo. Lenguaje poético, exaltado y cargado de lirismo.
+                    </div>
+                </div>
+
+                <!-- Ejemplo Costumbrista -->
+                <div class="fragment-card">
+                    <h3 class="fragment-card-title">2. EJEMPLO COSTUMBRISTA</h3>
+                    <p class="fragment-explanation">
+                        <strong>Obra:</strong> <em>Cosas de mi tierra</em> - José de la Cuadra (primeras narraciones costumbristas)
+                    </p>
+                    <div class="fragment-quote">
+                        <div class="fragment-quote-text">
+                            El viejo sacó su sombrero, lo limpió con el dorso del brazo, y saludó al patrón con una sonrisa cansada. Las mujeres, desde el corredor, cuchicheaban, pendientes del paso del tren como si el humo negro trajera noticias del alma de la ciudad. El pueblo volvió a su rumor habitual, al pregón, al sonido de las campanas.
+                        </div>
+                    </div>
+                    <div class="fragment-source">
+                        Fuente: <em>Cosas de mi tierra</em> - José de la Cuadra
+                    </div>
+                    <div class="fragment-analysis">
+                        <strong>Análisis:</strong> Representa el espíritu costumbrista por su valor descriptivo y tono pintoresco. El interés se centra en retratar la vida cotidiana rural, las relaciones sociales inmediatas y los paisajes tradicionales, sin profundizar en las causas sociales o económicas. El enfoque es estático, contemplativo y amable.
+                    </div>
+                </div>
+
+                <div class="synthesis-note">
+                    El costumbrismo 'mira' la realidad, el realismo 'la interpreta y la cuestiona', marcando así la madurez de la narrativa ecuatoriana.
+                </div>
+
+                <!-- Ejemplo Realista - A la Costa -->
+                <div class="fragment-card">
+                    <h3 class="fragment-card-title">3. EJEMPLO REALISTA - A LA COSTA</h3>
+                    <p class="fragment-explanation">
+                        <strong>Obra:</strong> <em>A la costa</em> - Luis A. Martínez (1904)
+                    </p>
+                    <div class="fragment-quote">
+                        <div class="fragment-quote-text">
+                            Salvador se detuvo al borde del camino. A lo lejos, los jornaleros marchaban bajo el sol como una procesión de sombras quemadas. El sudor rodaba con el polvo y el hambre en los ojos se hacía fiebre. Pensó que nada podía cambiar: el patrón dormía mientras los hombres morían en la zafra.
+                        </div>
+                    </div>
+                    <div class="fragment-source">
+                        Fuente: <em>A la costa</em> - Luis A. Martínez (1904)
+                    </div>
+                    <div class="fragment-analysis">
+                        <strong>Análisis:</strong> El enfoque realista convierte la descripción en testimonio de desigualdad, revelando la injusticia social y la crítica al modelo económico agrario. Visión objetiva y comprometida con la realidad del trabajador rural, alejándose del tono armonioso del costumbrismo.
+                    </div>
+                </div>
+
+                <!-- Ejemplo Realismo Social -->
+                <div class="fragment-card">
+                    <h3 class="fragment-card-title">4. EJEMPLO REALISMO SOCIAL</h3>
+                    <p class="fragment-explanation">
+                        <strong>Obra:</strong> <em>Los que se van</em> - Gallegos Lara, Aguilera Malta y Gil Gilbert (1930)
+                    </p>
+                    <div class="fragment-quote">
+                        <div class="fragment-quote-text">
+                            El montuvio, machete en mano, cortaba caña y rabia. No había canto. No había esperanza. El capataz gritaba, y en su voz el miedo se volvía orden, y la orden, castigo.
+                        </div>
+                    </div>
+                    <div class="fragment-source">
+                        Fuente: <em>Los que se van</em> - Grupo de Guayaquil (1930)
+                    </div>
+                    <div class="fragment-analysis">
+                        <strong>Análisis:</strong> Lenguaje directo, descarnado y socialmente consciente. Busca denunciar la opresión de los trabajadores y reclamar justicia. El pueblo no es objeto decorativo, sino protagonista de su propia historia.
+                    </div>
+                </div>
+
+                <div class="synthesis-note">
+                    El romanticismo mira al cielo de los sentimientos, el realismo al suelo de los hechos: así se define el paso de una literatura del ensueño a una literatura de conciencia.
+                </div>
+            </section>
+
+            <!-- Legado Section -->
+            <section id="legado" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">LEGADO E IMPORTANCIA</h2>
+                </div>
+                
+                <!-- Legacy Banner -->
+                <div style="text-align: center; margin: 2rem auto;">
+                    <img src="Imagenes/LEGADO E IMPORTANCIA.png" alt="Legado e Importancia del Realismo Ecuatoriano" style="max-width: 800px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(62, 39, 35, 0.2);">
+                </div>
+                
+                <div class="legacy-grid">
+                    <div class="legacy-item">
+                        <div class="legacy-item-title">Precursor del Realismo Mágico</div>
+                        <p>El realismo ecuatoriano sentó las bases del Realismo Mágico latinoamericano, especialmente a través de la obra de José de la Cuadra y Demetrio Aguilera Malta.</p>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-item-title">Construcción de identidad nacional</div>
+                        <p>Contribuyó a la construcción de una identidad nacional centrada en lo subalterno y los sectores marginados de la sociedad ecuatoriana.</p>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-item-title">Función testimonial</div>
+                        <p>Estableció la literatura como registro histórico-sociológico y documento de las condiciones sociales del Ecuador del siglo XX.</p>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-item-title">Conciencia crítica</div>
+                        <p>Transformó la literatura de entretenimiento en instrumento de conciencia crítica y protesta social.</p>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-item-title">Innovación lingüística</div>
+                        <p>Revolucionó el lenguaje literario mediante la incorporación de hablas populares, jergas regionales y modalidades lingüísticas populares.</p>
+                    </div>
+                    <div class="legacy-item">
+                        <div class="legacy-item-title">Influencia continental</div>
+                        <p>Influyó significativamente en la literatura del Boom latinoamericano y en los movimientos realistas continentales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Autores Section -->
+            <section id="autores" class="section authors-section">
+                <div class="section-header">
+                    <h2 class="section-title">AUTORES DEL REALISMO ECUATORIANO</h2>
+                    <div class="section-subtitle">Figuras fundamentales del movimiento literario</div>
+                </div>
+
+                <!-- Precursores -->
+                <div class="authors-group">
+                    <div class="group-header">
+                        <h3 class="group-title">PRECURSORES</h3>
+                        <div class="group-subtitle">Fundadores del realismo ecuatoriano</div>
+                    </div>
+                    <div class="authors-grid two-columns">
+                        <!-- Miguel Riofrío -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Miguel Riofrío.png" alt="Miguel Riofrío" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Miguel Riofrío</h4>
+                                <div class="author-years">1822 - 1879</div>
+                                <div class="author-origin">Loja, Ecuador</div>
+                                <div class="author-bio">
+                                    Jurista, político y escritor ecuatoriano. Riofrío es autor de la primera novela ecuatoriana, 'La Emancipada' (1863), considerada obra pionera del realismo literario latinoamericano. Su novela denuncia la opresión de género, la violencia institucional y la negación de derechos fundamentales.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>La Emancipada (1863)</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Primera novela nacional ecuatoriana. Pionero del realismo y la denuncia de la opresión de género.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Luis A. Martínez -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Luis A. Martínez.png" alt="Luis A. Martínez" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Luis A. Martínez</h4>
+                                <div class="author-years">1869 - 1909</div>
+                                <div class="author-origin">Ambato, Ecuador</div>
+                                <div class="author-bio">
+                                    Pintor, escritor y político ecuatoriano. Martínez fue una figura puente entre el costumbrismo decimonónico y el realismo social del siglo XX. Su novela 'A la Costa' inaugura la representación literaria del espacio costeño ecuatoriano y las contradicciones regionales.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>A la Costa (1904)</li>
+                                        <li>En el vagón (1899)</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Primera novela realista ecuatoriana. Representación de contradicciones sociales y conflictos regionales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grupo de Guayaquil -->
+                <div class="authors-group">
+                    <div class="group-header">
+                        <h3 class="group-title">GRUPO DE LA COSTA</h3>
+                    </div>
+                    <div class="authors-grid three-columns">
+                        <!-- José de la Cuadra -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/José de la Cuadra.jpg" alt="José de la Cuadra" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">José de la Cuadra</h4>
+                                <div class="author-years">1903 - 1941</div>
+                                <div class="author-origin">Guayaquil, Ecuador</div>
+                                <div class="author-bio">
+                                    Máximo exponente de la literatura montuvia ecuatoriana. Médico de profesión, De la Cuadra dedicó su vida a retratar la cultura del Litoral ecuatoriano. Su obra se caracteriza por la fusión del realismo social con elementos míticos y legendarios, convirtiéndose en precursor del Realismo Mágico.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Los Sangurimas (1934)</li>
+                                        <li>Horno</li>
+                                        <li>La Tigra</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Precursor del Realismo Mágico ecuatoriano. Creador de la narrativa montuvia que integra elementos épicos y míticos.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Joaquín Gallegos Lara -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Joaquín Gallegos Lara.png" alt="Joaquín Gallegos Lara" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Joaquín Gallegos Lara</h4>
+                                <div class="author-years">1911 - 1947</div>
+                                <div class="author-origin">Guayaquil, Ecuador</div>
+                                <div class="author-bio">
+                                    Militante comunista y escritor comprometido con las causas sociales. A pesar de padecer una enfermedad degenerativa que lo mantuvo postrado gran parte de su vida, Gallegos Lara se convirtió en una figura central del realismo social ecuatoriano.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Las cruces sobre el agua (1946)</li>
+                                        <li>Los que se van (1930, coautor)</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Introdujo el tema urbano y obrero en el realismo ecuatoriano. Su novela sobre la Masacre de 1922 es documento testimonial clave.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Demetrio Aguilera Malta -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Demetrio Aguilera Malta.jpg" alt="Demetrio Aguilera Malta" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Demetrio Aguilera Malta</h4>
+                                <div class="author-years">1909 - 1981</div>
+                                <div class="author-origin">Guayaquil, Ecuador</div>
+                                <div class="author-bio">
+                                    Narrador, dramaturgo y diplomático ecuatoriano. Pionero del realismo social, Aguilera Malta evolucionó hacia formas narrativas más complejas que integraban lo mítico, lo fantástico y la ciencia ficción.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Don Goyo (1933)</li>
+                                        <li>Siete lunas y siete serpientes (1970)</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Realismo mítico. Integración de mitología local y elementos legendarios.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Enrique Gil Gilbert -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Enrique Gil Gilbert.jpg" alt="Enrique Gil Gilbert" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Enrique Gil Gilbert</h4>
+                                <div class="author-years">1912 - 1973</div>
+                                <div class="author-origin">Guayaquil, Ecuador</div>
+                                <div class="author-bio">
+                                    Escritor y periodista ecuatoriano, miembro fundador del 'Grupo de Guayaquil'. Gil Gilbert combinó su militancia política de izquierda con una producción literaria centrada en la denuncia de la explotación agraria.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Nuestro pan (1942)</li>
+                                        <li>Los que se van (1930, coautor)</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Denuncia de la explotación en plantaciones arroceras.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alfredo Pareja Diezcanseco -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Alfredo Pareja Diezcanseco.jpg" alt="Alfredo Pareja Diezcanseco" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Alfredo Pareja Diezcanseco</h4>
+                                <div class="author-years">1908 - 1993</div>
+                                <div class="author-origin">Guayaquil, Ecuador</div>
+                                <div class="author-bio">
+                                    Narrador, ensayista, diplomático e historiador ecuatoriano. Pareja Diezcanseco fue una de las figuras más prolíficas del realismo social, transitando posteriormente hacia la novela histórica y la literatura simbólica.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Baldomera</li>
+                                        <li>El muelle</li>
+                                        <li>Las tres ratas</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Reivindicación de grupos marginados. Dimensión histórica y sociológica del realismo ecuatoriano.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Adalberto Ortiz -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Adalberto Ortiz.jpg" alt="Adalberto Ortiz" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Adalberto Ortiz</h4>
+                                <div class="author-years">1914 - 2003</div>
+                                <div class="author-origin">Esmeraldas, Ecuador</div>
+                                <div class="author-bio">
+                                    Poeta, narrador, diplomático y antropólogo afroecuatoriano. Ortiz dedicó su vida a la reivindicación de la cultura afroecuatoriana y la denuncia del racismo estructural.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Juyungo (1943)</li>
+                                        <li>La entundada y otros cuentos</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Fundador del realismo afroecuatoriano. Reivindicación de la negritud y denuncia de la discriminación racial.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nelson Estupiñán Bass -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Nelson  Estupiñan.jpg" alt="Nelson Estupiñán Bass" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Nelson Estupiñán Bass</h4>
+                                <div class="author-years">1912 - 2002</div>
+                                <div class="author-origin">Esmeraldas, Ecuador</div>
+                                <div class="author-bio">
+                                    Poeta, novelista, ensayista y periodista afroecuatoriano. Fue pionero en la literatura de denuncia antirracista en Ecuador, reivindicando la cultura afroesmeraldeña y visibilizando la discriminación estructural. Su obra fundacional 'Cuando los guayacanes florecían' es pieza clave del realismo afroecuatoriano por su retrato de la esclavitud, la resistencia y la identidad negra en el Ecuador.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Cuando los guayacanes florecían (1954)</li>
+                                        <li>El último río (1966)</li>
+                                        <li>Canto negro por la luz (1942, poesía)</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Dignificación literaria de lo afroecuatoriano. Dimensión continental del realismo social desde la perspectiva de la negritud. Denuncia del racismo y celebración de la identidad afrodescendiente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grupo de la Sierra -->
+                <div class="authors-group">
+                    <div class="group-header">
+                        <h3 class="group-title">GRUPO DE LA SIERRA</h3>
+                    </div>
+                    <div class="authors-grid three-columns">
+                        <!-- Jorge Icaza -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Jorge Icaza.png" alt="Jorge Icaza" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Jorge Icaza</h4>
+                                <div class="author-years">1906 - 1978</div>
+                                <div class="author-origin">Quito, Ecuador</div>
+                                <div class="author-bio">
+                                    Figura cumbre del indigenismo ecuatoriano y latinoamericano. Dramaturgo y novelista, Icaza dedicó su obra a denunciar la explotación sistemática del pueblo indígena en el sistema hacendario andino. Su narrativa cruda y descarnada representa el sistema de concertaje, los abusos sexuales y la servidumbre.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Huasipungo (1934)</li>
+                                        <li>En las calles (1935)</li>
+                                        <li>Cholos (1938)</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Consolidación del indigenismo radical ecuatoriano. Referente continental de la denuncia de la explotación indígena.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fernando Chávez -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Fernando Chávez.png" alt="Fernando Chávez" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Fernando Chávez</h4>
+                                <div class="author-years">1902 - 1999</div>
+                                <div class="author-origin">Quito, Ecuador</div>
+                                <div class="author-bio">
+                                    Narrador indigenista ecuatoriano. Chávez contribuyó a consolidar el esquema fundamental del indigenismo literario: la dicotomía explotador/explotado en el contexto del sistema hacendario andino.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Plata y bronce</li>
+                                        <li>El que no quiso matar</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Consolidación de la dicotomía explotador/explotado en el indigenismo ecuatoriano.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ángel Felicísimo Rojas -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/Ángel Felicísimo Rojas.jpg" alt="Ángel Felicísimo Rojas" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Ángel Felicísimo Rojas</h4>
+                                <div class="author-years">1909 - 2003</div>
+                                <div class="author-origin">Loja, Ecuador</div>
+                                <div class="author-bio">
+                                    Escritor lojano representante del realismo social en la sierra sur ecuatoriana. Rojas exploró las realidades rurales andinas desde una perspectiva regional que enriqueció la diversidad temática del movimiento realista.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>El éxodo de Yangana</li>
+                                        <li>Banca (1930)</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Realismo tardío centrado en la sierra sur ecuatoriana.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pedro Jorge Vera -->
+                        <div class="author-card">
+                            <div class="photo-container">
+                                <img src="Imagenes/pedro jorge vera.jpg" alt="Pedro Jorge Vera" style="width: 250px; height: 300px; object-fit: cover; border: 8px solid var(--color-secondary-brown); border-radius: 8px; box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Pedro Jorge Vera</h4>
+                                <div class="author-years">1914 - 1999</div>
+                                <div class="author-origin">Quito, Ecuador</div>
+                                <div class="author-bio">
+                                    Novelista, cuentista, ensayista y dramaturgo ecuatoriano. Militante comunista, Vera integró coherentemente compromiso político y creación literaria. Pionero del realismo urbano quitense, exploró la vida de la pequeña burguesía, la clase media urbana y los procesos de modernización contradictoria de la capital. Su obra representa un puente entre la Generación del 30 y la narrativa contemporánea, transitando del realismo social hacia formas más experimentales.
+                                </div>
+                                <div class="author-works">
+                                    <h4>Obras Principales:</h4>
+                                    <ul>
+                                        <li>Los animales puros (1946)</li>
+                                        <li>El pueblo soy yo (1976)</li>
+                                        <li>Luto eterno (1953)</li>
+                                        <li>Los nuevos años (ensayo, 1956)</li>
+                                    </ul>
+                                </div>
+                                <div class="author-contribution">
+                                    <h4>Aporte:</h4>
+                                    <p>Realismo urbano quitense. Ampliación del espectro social del realismo ecuatoriano más allá del campesinado. Exploración de la pequeña burguesía y procesos de modernización. Puente entre realismo social y narrativa experimental.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('.section');
+            
+            // Handle navigation clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active nav item
+                        navLinks.forEach(nav => nav.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+            
+            // Update active nav on scroll
+            function updateActiveNav() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNav);
+            
+            // Timeline button visibility control
+            const timelineBtn = document.getElementById('timelineBtn');
+            const heroSection = document.getElementById('inicio');
+            
+            function toggleTimelineButton() {
+                if (heroSection && timelineBtn) {
+                    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                    const scrollPosition = window.pageYOffset + 100;
+                    
+                    if (scrollPosition > heroBottom) {
+                        timelineBtn.classList.add('hidden');
+                    } else {
+                        timelineBtn.classList.remove('hidden');
+                    }
+                }
+            }
+            
+            window.addEventListener('scroll', toggleTimelineButton);
+            toggleTimelineButton(); // Check initial state
+            
+            // Mobile menu toggle
+            window.toggleSidebar = function() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('active');
+            }
+            
+            // Close mobile menu when clicking on a nav item
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        const sidebar = document.getElementById('sidebar');
+                        sidebar.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Fade in animation for elements
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all content elements
+            const animatedElements = document.querySelectorAll('.content-point, .author-card, .book-card, .subject-card, .characteristic-item, .legacy-item');
+            animatedElements.forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
+
