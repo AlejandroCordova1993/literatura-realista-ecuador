@@ -575,6 +575,45 @@ function renderEvents(containerId, events) {
     marker.className = 'event-marker';
     marker.style.color = event.color;
     
+    // Add connector line INSIDE marker if vertically offset
+    if (verticalOffset !== 0) {
+      const connector = document.createElement('div');
+      connector.className = 'event-connector';
+      
+      // The connector should go from the marker center to the timeline
+      if (verticalOffset > 0) {
+        // Event is below timeline - line goes UP from marker
+        connector.style.cssText = `
+          position: absolute;
+          left: 50%;
+          top: -${Math.abs(verticalOffset) - 10}px;
+          width: 2px;
+          height: ${Math.abs(verticalOffset) - 10}px;
+          background: ${event.color};
+          opacity: 0.35;
+          transform: translateX(-50%);
+          pointer-events: none;
+          z-index: -1;
+        `;
+      } else {
+        // Event is above timeline - line goes DOWN from marker
+        connector.style.cssText = `
+          position: absolute;
+          left: 50%;
+          bottom: -${Math.abs(verticalOffset) - 10}px;
+          width: 2px;
+          height: ${Math.abs(verticalOffset) - 10}px;
+          background: ${event.color};
+          opacity: 0.35;
+          transform: translateX(-50%);
+          pointer-events: none;
+          z-index: -1;
+        `;
+      }
+      
+      marker.appendChild(connector);
+    }
+    
     const label = document.createElement('div');
     label.className = 'event-label';
     
@@ -597,32 +636,6 @@ function renderEvents(containerId, events) {
     const tooltipText = `${event.year}: ${event.title}\n${event.description}`;
     label.setAttribute('title', tooltipText);
     eventEl.setAttribute('title', tooltipText);
-    
-    // Add connector line if vertically offset
-    if (verticalOffset !== 0) {
-      const connector = document.createElement('div');
-      connector.className = 'event-connector';
-      connector.style.cssText = `
-        position: absolute;
-        left: 50%;
-        width: 2px;
-        background: ${event.color};
-        opacity: 0.25;
-        transform: translateX(-50%);
-      `;
-      
-      if (verticalOffset > 0) {
-        // Below timeline
-        connector.style.top = '0';
-        connector.style.height = Math.abs(verticalOffset) + 'px';
-      } else {
-        // Above timeline
-        connector.style.bottom = '0';
-        connector.style.height = Math.abs(verticalOffset) + 'px';
-      }
-      
-      eventEl.appendChild(connector);
-    }
     
     eventEl.appendChild(marker);
     eventEl.appendChild(label);
